@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>table增删</title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<style type="text/css">
+		th{
+			background-color: green;
+		}
+
+		td{
+			background-color: pink;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+		$("document").ready(function(){ 
+
+		var $btn1 = $("input[type='button']");
+		var $input = $("input[type='text']");
+       
+		$("#text1").keyup(function(){
+			// var valueText = $input.val();
+   //          var len = $input.val().length; //放在函数外面是静态值，函数里面才是动态值
+  			// console.log("value text："+ valueText);
+  			// console.log("value len："+ len);
+  			console.log("value text1 len："+ $("#text1").val());
+  			//文本框是否为空，为空，搜索按钮灰化；不为空，搜索按钮高亮
+  			if($("#text1").val()){
+  				$btn1.removeAttr("disabled");
+  			}
+  			else{
+  				$btn1.attr("disabled","disabled");
+  			}
+		})
+
+		//删除
+		$('.del').on('click',function(){
+		 console.log("delect select this tr")
+         $(this).parent("td").parent("tr").remove();  //删除行
+		})
+
+	    //插入
+		$('.add').on('click',function(){	
+			console.log("add tr")
+			var $count = $("#table tr").length - 1;									
+			console.log("len:"+$count);	
+			var $addtr = "<tr><td><input type='checkbox'></td><td>"+$count+"</td><td></td><td></td><td></td><td><button class='del'>删除</button></td></tr>";				
+			var $tr = $("#table tr").get($("#table tr").length - 2);
+			console.log("tr:"+$tr);
+			$($tr).after($addtr);
+
+            //插入后删除
+			$(".del").on("click",function(){
+				$(this).parent("td").parent("tr").remove();  
+			})
+			// $("#table tr:last").after($addtr); //最后一行插入
+		})
+
+        //全删
+		$('.allDel').on('click',function(){
+			console.log("delect all data");
+			$("#table tr:not(#test)").remove();
+			//$("#table tr:not(#test)").empty();//清空子节点并没有删除tr 即当前节点
+		})
+
+		//查找
+        $("#btnSearch").on('click',function(){
+        	console.log("saerch data");
+        	var $td = $("td")
+        	var $input = $("input[type='text']");
+        	var text = $input.val();
+        	$("td:contains("+text+")").css("color","red");
+        })
+
+        //全选
+        $('.allCheck').on('click',function(){
+        	console.log("all Check value:"+$("input[class='allCheck']").prop("checked"))
+        	if($("input[class='allCheck']").prop("checked")){
+        		// var trnum = $("#table tr").length;
+        		// console.log("trnum:"+trnum);
+        		// for(var i = 0;i<trnum;i++)
+        		// {
+        		// 	console.log("i:"+i);
+        		// 	$("#check").each(function(){
+        		// 	$(this).attr("checked","true")
+        		// })
+        		// }
+
+        	}
+        })
+
+		})
+	</script>
+
+<span>查找姓名:</span>
+<input type="text" id="text1"> 
+<input type="button" value="search" id="btnSearch" disabled="">
+<br />
+<br />
+
+<table id="table" border="1px" cellpadding="5px">
+	<tr id="test">
+		<th></th>
+		<th>序号</th>
+		<th>姓名</th>
+	    <th>性别</th>
+	    <th>学号</th>
+	    <th>操作</th>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="check"></td>
+		<td>1</td>
+		<td>张三</td>
+		<td>男</td>
+		<td>01</td>
+		<td><button class="del">删除</button></td>
+	</tr>	
+	<tr>
+		<td><input type="checkbox" id="check"></td>
+		<td>2</td>
+		<td>李四</td>
+		<td>男</td>
+		<td>02</td>
+		<td><button class="del">删除</button></td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="check"></td>
+		<td>3</td>
+		<td>王五</td>
+		<td>男</td>
+		<td>03</td>
+		<td><button class="del">删除</button></td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" id="check"></td>
+		<td>4</td>
+		<td>赵小</td>
+		<td>女</td>
+		<td>04</td>
+		<td><button class="del">删除</button></td>
+	</tr>
+	<tr id="test">
+		<td></td>
+		<td>操作</td>
+		<td>全选：<input type="checkbox" class="allCheck"></td>
+		<td>全部取消：<input type="checkbox"></td>
+		<td><button class="add">增加一行</button></td>
+		<td><button class="allDel">全删</button></td>
+	</tr>
+
+</table>
+</body>
+</html>

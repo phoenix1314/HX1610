@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo0103</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#member{
+			height: 500px;
+			width: 300px;
+			border:1px red solid;
+			overflow-y: auto;
+		}
+
+		#member ul li{
+			list-style: none;
+			border-bottom: 1px gray solid
+		}
+		#member p{
+			display: inline-block;
+		}
+		#member li button{
+			float:right;
+		}
+	</style>
+	<script type="text/javascript" src="jq3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			//添加好友
+			$("#addbtn").on("click",function(){
+
+				var addStr = '<li>\
+				<input type="checkbox" name="">\
+		<img src="">\
+		<p>'+$("#addtext").val()+'</p>\
+		<button>del</button>\
+	</li>';
+				$("#member ul").prepend(addStr);
+
+			})
+
+			//删除单条好友
+			$("#member ul").on("click","button",function(){
+				$(this).parent().remove();
+			})
+
+			//全选
+			$("#checkall").on("click",function(){
+				if($("#checkall").is(":checked")){
+					$("#member ul input").prop("checked",true);
+				}
+				else{
+					$("#member ul input").prop("checked",false);
+
+				}
+			})
+
+			//反选
+			$("#checkoppo").on("click",function(){
+				$("#member ul input").each(function(){
+					var state = $(this).is(":checked")?false:true;//当前复选框的相反状态
+					$(this).prop("checked",state);
+				})
+			})
+
+			//选中删除
+			$("#delbtn").on("click",function(){
+				$("#member ul input").each(function(){
+					if($(this).is(":checked")){
+						$(this).parent().remove();
+					}
+				})
+			})
+
+		})//ready
+	</script>
+</head>
+<body>
+<div id="member">
+<div>
+	<input id="addtext" type="text" name="">
+	<button id="addbtn">添加好友</button>
+</div>
+<div>
+	全选：<input type="checkbox" id="checkall" name="">
+	<span>|</span>
+	反选：<input type="checkbox" id="checkoppo" name="">
+	<button id="delbtn">选中删除</button>
+</div>
+<ul>
+	<li>
+		<input type="checkbox" name="">
+		<img src="">
+		<p>张三</p>
+		<button>del</button>
+	</li>
+	<li>
+		<input type="checkbox" name="">
+		<img src="">
+		<p>李四</p>
+		<button>del</button>
+	</li>
+<!-- 	<li>
+		<input type="checkbox" name="">
+		<img src="">
+		<p>李四</p>
+		<button>del</button>
+	</li> -->
+
+</ul>
+	
+</div>
+
+</body>
+</html>

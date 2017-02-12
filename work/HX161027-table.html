@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>table</title>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+</head>
+<body>
+<table cellpadding="10" border="1px">
+	<tr>
+	<td>时间</td>
+	<td>地点</td>
+	<td>课程</td>
+	</tr>
+
+	<tr>
+	<td>一</td>
+	<td>机房一</td>
+	<td>h5</td>
+	</tr>
+
+	<tr>
+	<td>二</td>
+	<td>机房一</td>
+	<td>h5</td>
+	</tr>
+
+	<tr>
+	<td>三</td>
+	<td>机房一</td>
+	<td>h5</td>
+	</tr>
+
+	<tr>
+	<td>四</td>
+	<td>机房一</td>
+	<td>h5</td>
+	</tr>
+
+	<tr>
+	<td>五</td>
+	<td>机房一</td>
+	<td>h5</td>
+	</tr>
+
+	<tr>
+	<td>六</td>
+	<td>机房一</td>
+	<td>h5</td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+$("tr:even").css("background","blue");
+$("tr:odd").css("background","pink");
+// $("tr:nth-child(odd)").css("background","yellow");
+$("tr:eq(0)").css("background","#00ff00");
+
+//鼠标移到tr变颜色
+$("tr").bind("mouseover",function(){
+		$(this).css("background-color","#ff0000");
+	})
+
+$("tr").bind("mouseout",function(){
+		$("tr:even").css("background","blue");
+        $("tr:odd").css("background","pink");
+        $("tr:eq(0)").css("background","#00ff00");       
+	})
+
+// $("tr").live({
+// 	mouseover:function(){
+// 		$(this).css("background-color","#ff0000");
+// 	},
+
+// 	mouseout:function(){
+// 		$(this).css("background-color","#000000");
+//     }
+// })
+
+</script>
+
+</body>
+</html>

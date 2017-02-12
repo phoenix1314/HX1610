@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.1.js">></script>
+<style type="text/css">
+
+#scrollPics{
+    height: 500px;
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position:relative;
+}
+.num{
+    position:absolute;
+    right:5px; 
+    bottom:5px;
+}
+#scrollPics .num li{
+    float: left;
+    color: #FF7300;
+    text-align: center;
+    line-height: 16px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 3px 1px;
+    border: 1px solid #FF7300;
+    background-color: #fff;
+}
+#scrollPics .num li.on{
+    color: #fff;
+    line-height: 21px;
+    width: 21px;
+    height: 21px;
+    font-size: 16px;
+    margin: 0 1px;
+    border: 0;
+    background-color: #FF7300;
+    font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+
+<div id="scrollPics">
+	<div class="btn1" id="btn">
+		<button id="left"> < </button>
+		<button id="right"> > </button>
+    </div>
+
+	<ul class="slider">
+		<li><img src="image/banner1.jpg"></li>
+		<li><img src="image/banner2.jpg"></li>
+		<li><img src="image/banner3.jpg"></li>
+	</ul>
+	<ul class="num">
+	<li class="on">1</li>
+	<li>2</li>
+	<li>3</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+
+    var len = $(".num > li").length;
+    var index = 0;  //图片序号
+    var adTimer;
+    $(".num li").mouseover(function() {
+        index = $(".num li").index(this);  //获取鼠标悬浮 li 的index
+        showImg(index);
+    }).eq(0).mouseover();
+    //滑入停止动画，滑出开始动画.
+    $('#banner').hover(function() {
+        clearInterval(adTimer);
+    }, function() {
+        adTimer = setInterval(function() {
+            showImg(index)
+            index++;
+            if (index == len) {       //最后一张图片之后，转到第一张
+                index = 0;
+            }
+        }, 3000);
+    }).trigger("mouseleave");
+    function showImg(index) {
+        var adHeight = $("#banner>ul>li:first").height();
+        $(".slider").stop(true, false).animate({
+            "marginTop": -adHeight * index + "px"    //改变 marginTop 属性的值达到轮播的效果
+        }, 1000);
+        $(".num li").removeClass("on")
+            .eq(index).addClass("on");
+    }
+	
+</script>
+
+</body>
+</html>

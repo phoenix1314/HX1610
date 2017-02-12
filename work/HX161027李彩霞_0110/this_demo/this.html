@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*this是Javascript语言的一个关键字。
+         它代表函数运行时，自动生成的一个内部对象，只能在函数内部使用*/
+
+        //1、函数调用  属于全局性调用，因此this就代表全局对象Global
+        function  test() {
+                this.x = 1;
+//                alert(this.x);
+                 console.log("test this.x  value is "+this.x)
+        }
+        test();
+        
+        var x = 1;
+        function  test1() {
+            console.log("test1 this.x  value is "+this.x);
+//            alert(this.x);
+        }
+        test1();
+        
+        function  test2() {
+            this.x = 0;
+            console.log("test2 this.x  value is "+this.x);
+        }
+        test2();
+
+        //2、作为对象方法的调用  函数还可以作为某个对象的方法调用，这时this就指这个上级对象
+        function  test3() {
+            console.log("test3 this.x  value is "+this.x);
+        }
+        var demo = {};
+        demo.x = 2;
+        demo.y = test3;
+        demo.y( );
+
+        //3、作为构造函数调用 所谓构造函数，就是通过这个函数生成一个新对象（object）。这时，this就指这个新对象
+        function  test4() {
+            this.y = 4;
+        }
+
+        var demo4 = new test4();
+        alert(demo4.y);
+
+        var  y = 5;
+        function  test5() {
+            this.y = 4;
+            console.log("test5 this.y  value is "+this.y);
+        }
+
+        var demo5 = new test5();
+        alert(y);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

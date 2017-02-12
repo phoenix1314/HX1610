@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/tools/jq3.js"></script>
+    <script src="../js/plug/brandInfo.js"></script>
+    <script src="../js/plug/brandData.js"></script>
+    <script src="../js/plug/webSQL.js"></script>
+    <title>商品管理表</title>
+    <script>
+            $(function () {
+                var brandW = new brandInfo(400,200);
+                brandW.init("frame");
+                brandW.setTextDeclare("这是商品产地管理表，以下是已添加数据，需再添加信息，请点击添加并确认");
+                brandW.createTable();
+                var arryTh = ["id","name","category","origin_id","img","price","operate"];
+                brandW.setTh(arryTh);
+                //var arryBtn = ["增加一行","确认添加"];
+               //  comW.setTdHandle(arryBtn);
+                brandW.setBtnAdd("增加一行");
+                brandW.setBtnOk("确认保存");
+
+//                var field = "id integer primary key autoincrement, name varchar(32),origin_id int(32),img varchar(32), price int(32)";
+//                db.createBrandInfo("brandInfo",field);
+            })//
+    </script>
+</head>
+<body>
+<div id="frame">
+
+</div>
+</body>
+</html>

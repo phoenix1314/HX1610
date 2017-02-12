@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*月份跟季度*/
+    // var grade = 7;
+    // var quarter;
+    // if(grade/3>0&&grade/3<=1){
+    //     quarter = 1;
+    // }else if(grade/3>1&&grade/3<=2){
+    //     quarter = 2;
+    // }else if(grade/3>2&&grade/3<=3){
+    //     quarter = 3;
+    // }else if(grade/3>3&&grade/3<=4){
+    //     quarter = 4;
+    // }else{
+    //     quarter = 0;
+    // }
+    // switch(quarter){//Math.ceil(grade/3)
+    //     case 1:
+    //         console.log(1);
+    //         break;
+    //     case 2:
+    //         console.log(2);
+    //         break;
+    //     case 3:
+    //         console.log(3);
+    //         break;
+    //     case 4:
+    //         console.log(4);
+    //         break;
+    //     default:
+    //         console.log("不存在这个月份");
+    // }
+
+    /*联合使用continue,break求前十个偶数和*/
+    var number = 0;//用来计算偶数的个数
+    var sum = 0;
+    var i=1;
+   while(i>=1)
+   {
+       if(i<=100){
+
+           if(i%2==1){//如果i为奇数，先对i做累加，然后使用continue 跳出本次循环
+
+               i++;
+               continue;
+           }
+           //如果i不为奇数，则会跳过前面的if判断，执行下面的代码
+           if(number<10){//判断偶数的个数是否小于等于10个（由于number从0开始，0--9实际上循环了10次，所以这里的判断是number<10）
+
+               document.write(i+"&nbsp");//输出偶数i
+               sum = sum+i;
+               i++;
+               number++;//做完上面的偶数输出跟和输出后，记得给偶数的个数（number）加一
+
+           }else{//如果偶数的个数大于10个的话，整个循环结束
+
+              break;
+           }
+       }
+   }
+    console.log("前十个偶数的和是："+sum);
+    document.write("<br/>");
+
+    /*在页面打印三角形*/
+    var rows = 10;//一共多少行星星
+    var length = rows*2-1;//一共多少列
+    var mid = Math.floor(length/2);//计算每行的最中间是第几个（Math.floor是对括号里面的数向下取整）
+    for(var i = 0;i<rows;i++){//循环这十行
+        var row = i;//表示第几行（从0开始算）
+
+        var leftIndex = mid-row;//每行最左边星星的位置（比如第一行星星的位置是放第十个，由于这个位置也是从零开始算，所以这里它的位置为9）
+        var totals = 0;//每行的星星个数
+
+        for(var j = 0;j<length;j++){
+
+            if(j>=leftIndex && (j-leftIndex)%2==0 && totals<=row){//第一个条件：要打印星星必须至少在这行星星的()  第二个条件：必须是每个一个数打印一个星星  第三个条件：星星的总数不能大于本行的下标
+                document.write("*");
+                totals++;//每行每输入一个星星，累加一次星星的个数，直到这一行循环完
+            }else{//如果if的条件都不符合则输出空格
+                document.write("&nbsp;");
+            }
+        }
+        document.write("<br/>");
+    }
+
+</script>
+</body>
+</html>

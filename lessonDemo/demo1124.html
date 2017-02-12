@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+	<script type="text/javascript">
+
+		// var n = prompt("要算几个数的平均数？");
+		// var sum=0;
+		// var num=0;
+		// for(var i=0;i<n;i++){
+		// 	num = prompt("请输入第"+(i+1)+"个数");
+		// 	sum = sum+parseFloat(num);
+		// }
+		// document.write(sum/n);
+
+
+
+		// var i=0;
+		// while(i++<=10){
+		// 	document.write(i+"&nbsp;");
+		// 	if (i==5) {
+		// 		continue;
+		// 	}
+		// 	// document.write(i+"&nbsp;");
+		// }
+		// var sum=0;
+
+		// for(var i=1;i<=20;i++){//i=1  i=2
+
+		// 	while(i%2==0){//2%2==0
+		// 		if(i==2) {//i=2
+		// 			break;
+		// 		}
+		// 	}
+		// 	if (i==2) {break;}
+		// 	sum=sum+i;
+		// 	console.log(1,i);
+		// 	console.log(2,sum);
+
+		// }
+		// document.write(sum);
+   	
+   	function add(a,b){//定义函数的时候，a，b为形参
+   		var sum=a+b;
+   		// document.write(sum+"<br />");
+   		// return sum;//返回值
+   	}
+   	var a=5;
+   	var b=6;
+   	add(a,b);//调用函数的时候，带进来的是实参
+// alert(add(1,2));
+// add(333,222);
+   // var c=add(1,1);//通过变量来接收返回值
+   // document.write(c+"<br/>");
+   // document.write(add(323,445));
+   // alert(typeof(add));//数据类型为function
+
+
+   function max(a,b){
+   	// a>b?return a:return b;
+   	var max = a>b?a:b;
+   	return max;
+   }
+
+   // alert(max(2,5));
+   // alert(max(3,max(1,4)));
+
+   var sum1=10;
+   function sum(n){
+   	var sum1=0;
+   	for(var i=1;i<=n;i++){
+   		sum1=sum1+i;
+   	}
+   	document.write("inner sum= " +sum1+"<br />");
+   	return sum1;
+   	// alert(11111);
+
+   }
+
+   alert(sum(10));
+   document.write("outer sum= " +sum1);
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

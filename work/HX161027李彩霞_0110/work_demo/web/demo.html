@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/jquery-3.1.1.js"></script>
+    <title>Title</title>
+    <style type="text/css">
+            .btn{
+                width: 100px;
+                height: 50px;
+                background-color: darkred;
+                margin-left: 100px;
+                margin-top: 150px;
+                position: absolute;
+
+            }
+    </style>
+    <script>
+        function myWindows(w,h,divID) {
+            this.width = w;
+            this.height = h;
+            this.fID = divID;
+            this.oDiv;
+            this.oLabel;
+            this.init = function ( ) {
+            this.oDiv = $("<div></div>");
+            this.oDiv.css("width",this.width);
+            this.oDiv.css("height",this.height);
+            this.oDiv.css("border","1px red solid");
+            this.oDiv.css("position","absolute");
+
+            this.oDiv.appendTo($('#'+this.fID));
+            }
+
+            this.setPos=function(x,y){
+                this.oDiv.css("margin-left",x);
+                this.oDiv.css("margin-top",y);
+            }
+            this.setText=function(textValue){
+                this.oDiv.html(textValue)
+//                this.oDiv.css(" text-align","center");
+            }
+
+            this.addElement=function (element,name) {
+                this.oLabel = $('#'+this.fID).append(element);
+            }
+
+
+//            this.elementPos =  function (posLeft,posTop) {
+//                this.oLabel.css("left",posLeft);
+//                this.oLabel.css("top",posTop);
+//            }
+
+        }
+
+        $(function () {
+            $(".btn").on("click",function () {
+                var oDiv = new myWindows(300,100,"panel");
+                oDiv.init();
+                oDiv.setPos(10,10);
+                oDiv.oDiv.css("box-shadow", "5px 5px 5px gray");
+                oDiv.oDiv.css("background-color","pink");
+                oDiv.setText("恭喜你，已登录成功！");
+//                oDiv.addElement("<button>恭喜你，已登录成功！</button>","btn1");
+            })
+            var oDiv1 = new myWindows(300,100,"panel");
+            oDiv1.init();
+            oDiv1.addElement("<button>ok</button>");
+            oDiv1.oLabel.css("background-color","blue")
+            oDiv1.addElement("<p>1111111111111111111</p>");
+            oDiv1.addElement("<span>11111111111sssss</span>");
+        })
+    </script>
+</head>
+<body>
+<button class="btn">ok</button>
+<div id="panel">
+    <!--<p>提示</p>-->
+    <!--<p>进入界面是否同意协议</p>-->
+    <!--<button>ok</button>-->
+    <!--<button>Nok</button>-->
+</div>
+</body>
+</html>

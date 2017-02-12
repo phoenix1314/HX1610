@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/tools/jquery-3.1.1.js"></script>
+    <script>
+
+        function myWindow(w,h,fatherID){
+
+            this.width=w;
+            this.height =h;
+            this.fID= fatherID;
+            this.oDiv;
+           // var self =this;
+            this.init=function(){
+
+                this.oDiv = $("<div></div>");
+                this.oDiv.css("width",this.width);
+                this.oDiv.css("height",this.height);
+                this.oDiv.css("border","1px solid red");
+                this.oDiv.appendTo($('#'+this.fID));
+
+            }
+            this.setPos=function(x,y){
+                    this.oDiv.css("margin-left",x);
+                    this.oDiv.css("margin-top",y);
+            }
+            this.setText=function(msg){
+                this.oDiv.html(msg)
+            }
+
+        }
+
+
+      $(function(){
+        var oDiv = new myWindow(100,100,"father");
+            oDiv.init();
+            oDiv.setPos(200,200);
+
+          var oDiv2 = new myWindow(200,200,"father");
+          oDiv2.init();
+          oDiv2.setPos(500,200);
+          oDiv2.setText("helloworld");
+      })
+    </script>
+</head>
+<body>
+  <div id="father">
+
+  </div>
+</body>
+</html>

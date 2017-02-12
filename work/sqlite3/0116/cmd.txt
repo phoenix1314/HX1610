@@ -1,0 +1,261 @@
+Error: near "inster": syntax error
+sqlite> insert into class values(1,"html");
+sqlite> insert into class(name) values("php");
+sqlite> insert into class(name) values("java");
+sqlite> insert into class(name) values("mysql");
+sqlite> select * from class
+   ...> ;
+kc_id       name
+----------  ----------
+1           html
+2           php
+3           java
+4           mysql
+sqlite> create table score(id integer primary key autoincrement,stu_id int(32),k
+c_id int(8),score int(32));
+sqlite> .head on
+sqlite> .mode column
+sqlite> inster into score values(1,1001,1,50);
+Error: near "inster": syntax error
+sqlite> insert into score values(1,1001,1,50);
+sqlite> insert into score(stu_id,kc_id,score) values(1002,2,80);
+sqlite> insert into score(stu_id,kc_id,score) values(1003,1,70);
+sqlite> insert into score(stu_id,kc_id,score) values(1004,4,80);
+sqlite> insert into score(stu_id,kc_id,score) values(1004,1,55);
+sqlite> insert into score(stu_id,kc_id,score) values(1004,2,98);
+sqlite> select * from score;
+id          stu_id      kc_id       score
+----------  ----------  ----------  ----------
+1           1001        1           50
+2           1002        2           80
+3           1003        1           70
+4           1004        4           80
+5           1004        1           55
+6           1004        2           98
+sqlite> .table
+class  score  stu
+sqlite> select stu.name from stu, score, class where stu.stu_id = score.stu_id a
+nd class.kc_id = score.kc_id;
+name
+----------
+zhangsan
+lisi
+wangwu
+libin
+libin
+libin
+sqlite> select from stu, score, class where stu.stu_id = score.stu_id and class.
+kc_id = score.kc_id;
+Error: near "from": syntax error
+sqlite> select * from stu, score, class where stu.stu_id = score.stu_id and clas
+s.kc_id = score.kc_id;
+stu_id      name        age         time                 id          stu_id
+ kc_id       score       kc_id       name
+----------  ----------  ----------  -------------------  ----------  ----------
+ ----------  ----------  ----------  ----------
+1001        zhangsan    18          2017-01-16 21:27:36  1           1001
+ 1           50          1           html
+1002        lisi        22          2017-01-16 21:31:04  2           1002
+ 2           80          2           php
+1003        wangwu      23          2017-01-16 21:31:16  3           1003
+ 1           70          1           html
+1004        libin       22          2017-01-16 21:31:32  4           1004
+ 4           80          4           mysql
+1004        libin       22          2017-01-16 21:31:32  5           1004
+ 1           55          1           html
+1004        libin       22          2017-01-16 21:31:32  6           1004
+ 2           98          2           php
+sqlite> select stu.name from stu, score, class where class.name = mysql;
+Error: no such column: mysql
+sqlite> select * from stu, score, class where stu.stu_id = score.stu_id and clas
+s.kc_id = score.kc_id ande class.name = "mysql";
+Error: near "ande": syntax error
+sqlite> select * from stu, score, class where stu.stu_id = score.stu_id and clas
+s.kc_id = score.kc_id and class.name = "mysql";
+stu_id      name        age         time                 id          stu_id
+ kc_id       score       kc_id       name
+----------  ----------  ----------  -------------------  ----------  ----------
+ ----------  ----------  ----------  ----------
+1004        libin       22          2017-01-16 21:31:32  4           1004
+ 4           80          4           mysql
+sqlite> select stu.name from stu, score, class where stu.stu_id = score.stu_id a
+nd class.kc_id = score.kc_id and class.name = "mysql";
+name
+----------
+libin
+sqlite>
+sqlite>
+sqlite>
+sqlite>
+sqlite>
+sqlite>
+sqlite> select stu.name from stu, score, class where stu.stu_id = score.stu_id a
+nd class.kc_id = score.kc_id and class.name = "mysql";
+name
+----------
+libin
+sqlite> select stu.name from stu, score, class where class.name = "mysql";
+name
+----------
+zhangsan
+zhangsan
+zhangsan
+zhangsan
+zhangsan
+zhangsan
+lisi
+lisi
+lisi
+lisi
+lisi
+lisi
+wangwu
+wangwu
+wangwu
+wangwu
+wangwu
+wangwu
+libin
+libin
+libin
+libin
+libin
+libin
+sqlite>
+sqlite>
+sqlite> select stu.name from stu, score, class where stu.stu_id = score.stu_id a
+nd class.kc_id = score.kc_id and class.name = "mysql";
+name
+----------
+libin
+sqlite> select * from stu, score, class where stu.stu_id = score.stu_id and clas
+s.kc_id = score.kc_id and class.name = "mysql";
+stu_id      name        age         time                 id          stu_id
+ kc_id       score       kc_id       name
+----------  ----------  ----------  -------------------  ----------  ----------
+ ----------  ----------  ----------  ----------
+1004        libin       22          2017-01-16 21:31:32  4           1004
+ 4           80          4           mysql
+sqlite>
+sqlite>
+sqlite>
+sqlite>
+sqlite>
+sqlite> select stu.name from stu, score, class where stu.stu_id = score.stu_id a
+nd class.kc_id = score.kc_id and score.score < 60;
+name
+----------
+zhangsan
+libin
+sqlite>
+sqlite>
+sqlite> select stu.name from stu, score, class where stu.stu_id = score.stu_id a
+nd class.kc_id = score.kc_id and score.score < 60;
+name
+----------
+zhangsan
+libin
+sqlite> select stu.stu_id,stu.name,class.name, from stu, score, class where stu.
+stu_id = score.stu_id and class.kc_id = score.kc_id and stu.stu_id;
+Error: near "from": syntax error
+sqlite> select stu.stu_id,stu.name,class.name from stu, score, class where stu.s
+tu_id = score.stu_id and class.kc_id = score.kc_id and stu.stu_id;
+stu_id      name        name
+----------  ----------  ----------
+1001        zhangsan    html
+1002        lisi        php
+1003        wangwu      html
+1004        libin       mysql
+1004        libin       html
+1004        libin       php
+sqlite>
+sqlite>
+sqlite>
+sqlite> select stu.stu_id,stu.name,class.name, from stu, score, class where stu.
+stu_id = score.stu_id and class.kc_id = score.kc_id and stu.stu_id 1004
+   ...> ;
+Error: near "from": syntax error
+sqlite> select stu.stu_id,stu.name,class.name, from stu, score, class where stu.
+stu_id = score.stu_id and class.kc_id = score.kc_id and stu.stu_id = 1004;
+Error: near "from": syntax error
+sqlite> select stu.stu_id,stu.name,class.name from stu, score, class where stu.s
+tu_id = score.stu_id and class.kc_id = score.kc_id and stu.stu_id = 1004;
+stu_id      name        name
+----------  ----------  ----------
+1004        libin       mysql
+1004        libin       html
+1004        libin       php
+sqlite>
+sqlite>
+sqlite>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        select stu.stu_id,stu.name,class.name from stu, score, class where stu.s
+tu_id = score.stu_id and class.kc_id = score.kc_id and stu.stu_id = 1004;
+stu_id      name        name
+----------  ----------  ----------
+1004        libin       mysql
+1004        libin       html
+1004        libin       php
+
+sqlite> select stu.stu_id,stu.name,class.name from stu, score, class where stu.s
+tu_id = score.stu_id and class.kc_id = score.kc_id and stu.stu_id = 1004;
+stu_id      name        name
+----------  ----------  ----------
+1004        libin       mysql
+1004        libin       html
+1004        libin       php
+
+sqlite> select stu.stu_id,stu.name,class.name from stu, score, class where stu.s
+tu_id = score.stu_id and class.kc_id = score.kc_id and stu.stu_id = 1004;
+stu_id      name        name
+----------  ----------  ----------
+1004        libin       mysql
+1004        libin       html
+1004        libin       php
+sqlite> select stu.stu_id,stu.name,class.name,score.score from stu, score, class
+ where stu.stu_id = score.stu_id and class.kc_id = score.kc_id and stu.stu_id =
+1004;
+stu_id      name        name        score
+----------  ----------  ----------  ----------
+1004        libin       mysql       80
+1004        libin       html        55
+1004        libin       php         98
+
+sqlite>
+sqlite> select avg(score.score) from stu, score, class where stu.stu_id = score.
+stu_id and class.kc_id = score.kc_id and stu.stu_id = 1004;
+avg(score.score)
+----------------
+77.6666666666667
+sqlite>

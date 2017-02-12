@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    </head>
+    <title></title>
+<style type="text/css">
+	.div1{
+		float: left;
+        width: 100%;
+        height: 331px;
+        overflow: hidden;
+        position: relative;
+	}
+
+    .div1 .arrow{
+        width: 100%;
+        position: absolute;
+        top: 160px;
+    }
+   .div2 .row{
+        width: 100%;
+        position: absolute;
+        
+    }
+
+    .div1 .arrow button:first-child{
+        float: left;
+        margin-left: 10px;  
+    }
+
+    .div1 .arrow button:last-child{
+        float: right;
+        margin-right: 10px;
+    }
+
+    .div1 img{
+        width: 100%;
+    }
+
+    .div1 ul{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .div1 li{
+        width: 100%;
+        list-style: none;
+        float: left;
+    }
+  
+</style>
+    <body>
+    <div class="div1" id="div1">
+        <div class="arrow">
+           <button onclick="playLeft()">左边</button>
+           <button onclick="playRight()">右边</button>
+        </div>
+        <ul>
+            <li style="display:block;"><img src="image/banner1.jpg" ></li>
+            <li style="display:none;"><img src="image/banner2.jpg" ></li>
+            <li style="display:none;"><img src="image/banner3.jpg" ></li>
+        </ul>
+       
+    </div>
+    <div class="div2">
+       <div class="row" id="testid">
+            <input type="button" name="" onclick="fun1()" value="1"> 
+            <input type="button" name="" onclick="fun2()"   value="2">
+            <input type="button" name="" onclick="fun3()" value="3">
+        </div>
+    </div>   
+    <script type="text/javascript">
+    var btn=document.getElementsByTagName('input');
+    var aLi=document.getElementsByTagName('li');
+    
+/*
+        for(var i=0;i<btn.length;i++){
+            btn[i].index=i;
+            btn[i].onclick=function() {
+                for(var i=0;i<btn.length;i++) {
+                    n=this.index;
+                    aLi[i].style.display="none";
+                }
+                aLi[n].style.display="block";
+            }
+        }
+     */    
+
+     var pos=0;
+
+     function show(){
+              if(pos==3){
+                 pos=0;
+              }
+              for(var i=0;i<3;i++){
+                aLi[i].style.display="none";
+              }
+            
+              aLi[pos].style.display="block";
+              pos++;
+     } 
+
+
+     var autoPlay=setInterval(show,1000);
+
+
+     var showDiv = document.getElementById("div1");
+
+     showDiv.onmouseover=function(){
+        clearInterval(autoPlay);
+     }
+     showDiv.onmouseout=function(){
+        autoPlay=setInterval(show,1000);
+     }
+
+
+
+
+       
+        
+        function fun1() {
+         
+            aLi[0].style.display="block";
+
+           
+            aLi[1].style.display="none";
+
+            aLi[2].style.display="none";
+            pos=0;
+           // document.getElementById("testid").getElementsByTagName("input")[0].style.color="red";
+            document.getElementsByClassName("div2")[0].getElementsByTagName("input")[0].style.color="red";
+        }
+        function fun2() {
+         
+            aLi[0].style.display="none";
+           
+            aLi[1].style.display="block";
+            
+            aLi[2].style.display="none";
+            pos=1;
+        }
+        function fun3() {
+         
+            aLi[0].style.display="none";
+           
+            aLi[1].style.display="none";
+            
+            aLi[2].style.display="block";
+            pos=2;
+        }
+
+        function playLeft(){
+            pos++;
+            if(pos==3){
+                pos=0;
+            }
+            for(var i=0;i<3;i++){
+                aLi[i].style.display="none";
+            }
+            
+            aLi[pos].style.display="block";
+        }
+
+        function playRight(){
+            pos--;
+            if(pos==-1){
+                pos=2;
+            }
+            for(var i=0;i<3;i++){
+                aLi[i].style.display="none";
+            }
+            
+            aLi[pos].style.display="block";
+        }
+     // function playleft(){
+     //    pos==;
+     //    if(pos==1)
+     // }
+
+    </script>
+
+    
+
+
+    </body>
+    </html>

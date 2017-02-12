@@ -1,0 +1,125 @@
+标题：2017.01.05 CSS3
+课程内容：
+前言：什么是浏览器的内核
+通常所谓的浏览器内核也就是浏览器所采用的渲染引擎，
+渲染引擎决定了浏览器如何显示网页的内容以及页面的格式信息。
+不同的浏览器内核对网页编写语法的解释也有不同，
+因此同一网页在不同的内核的浏览器里的渲染（显示）效果也可能不同，
+这也是网页编写者需要在不同内核的浏览器中测试网页显示效果的原因。
+
+移动端的浏览器内核主要说的是系统内置浏览器的内核。
+
+目前移动设备浏览器上常用的内核有 Webkit，Blink，Trident，Gecko 等，
+其中 iPhone 和 iPad 等苹果 iOS 平台主要是 WebKit，
+Android 4.4 之前的 Android 系统浏览器内核是 WebKit，
+Android4.4 系统浏览器切换到了Chromium，内核是 Webkit 的分支 Blink，
+Windows Phone 8 系统浏览器内核是 Trident
+
+1、浏览器前缀
+Firefox: -moz-box-shadow
+Safari/谷歌: -webkit-box-shadow
+Opera: -o-box-shadow
+IE: -ms-box-shadow
+
+2、选择器
+a、属性选择器：
+E[att^="val"] 匹配具有att属性、且值以val开头的E元素如：a[href^='mailto']
+E[att$="val"] 匹配具有att属性、且值以val结尾的E元素 如：a[href$='.pdf'], 
+E[att*="val"] 匹配就有att属性，且值中含有val的E元素 如：a[class*=‘item’]
+
+b、兄弟选择器
+Div~img
+
+c、伪类选择器
+:nth-child(n)
+:nth-last-child(n)
+:last-child
+:checked
+:empty
+:only-child
+:nth-of-type(odd)
+:nth-of-type(even)
+
+3、CSS边框
+border-radius（含义是“边框半径”）。
+为这个属性提供一个值，就能同时设置四个圆角的半径。
+所有合法的CSS度量值都可以使用：em、ex、pt、px、百分比等等
+border-radius：15px 5px 25px 5px / 水平半径
+               3px 5px 10px 15px   垂直半径
+
+单个圆角设置
+border-top-left-radius
+border-top-right-radius
+border-bottom-right-radius
+border-bottom-left-radius
+都可以同时设置1到2个值
+设置1个值，表示水平半径与垂直半径相等
+设置2个值，第一个值表示水平半径，第二个值表示垂直半径。 
+
+4、边框阴影 box-shadow
+
+5、边框图
+box-image属性（简写形式）
+border-image-source	用在边框的图片的路径。	
+border-image-slice	图片边框向内偏移。	
+border-image-width	图片边框的宽度。	
+border-image-outset	边框图像区域超出边框的量。	
+border-image-repeat	图像边框是否应平铺(repeated)、铺满(rounded)或拉伸(stretched)。
+
+6、背景
+background-size    规定背景图片尺寸
+background-origin  规定背景图片的定位区域
+background-clip    规定背景的绘制区域
+
+7、背景图片尺寸
+background-size：以像素或百分比规定尺寸 
+
+8、渐变
+linear-gradient：规定背景颜色渐变。
+语法：background: linear-gradient(direction,?color-stop1,?color-stop2, ...);
+使用角度
+语法： background: linear-gradient(angle,?color-stop1,?color-stop2);
+
+9、文本效果
+text-shadow    文本阴影效果
+word-wrap      自动换行
+text-overflow  文本超出处理
+
+10、字体
+@Font-face 特性：服务端字体。
+可以用来加载字体样式，而且它还能够加载服务器端的字体文件，让客户端显示客户端所没有安装的字体。
+
+11、媒体
+语法：@media ：<sMedia> { sRules }
+
+取值：<sMedia>： 指定设备名称。请参阅附录：设备类型 
+{sRules}： 样式表定义。 
+
+遇到问题：响应式，本来是想把聊天的对话框往下移，不知道为啥不行，明天再研究下
+作业情况：已提交
+
+心得体会：jq和css3要尝试才知道有些属性的效果是怎么，今后才能更好的运用
+
+拓展：
+静态、自适应、流式、响应式四种网页布局的区别
+1、静态布局（Static Layout）
+即传统Web设计，对于PC设计一个Layout，在屏幕宽高有调整时，使用横向和竖向的滚动条来查阅被遮掩部分；
+对于移动设备，单独设计一个布局，使用不同的域名如wap.或m.。
+
+2、自适应布局（Adaptive Layout）
+自适应布局（Adaptive）的特点是分别为不同的屏幕分辨率定义布局。布局切换时页面元素发生改变，但在每个布局中，页面元素不随窗口大小的调整发生变化。
+你可以把自适应布局看作是静态布局的一个系列。
+
+3、流式布局（Liquid Layout）
+流式布局（Liquid）的特点（也叫"Fluid") 是页面元素的宽度按照屏幕进行适配调整，主要的问题是如果屏幕尺度跨度太大，那么在相对其原始设计而言过小或过大的屏幕上不能正常显示
+
+4、响应式布局（Responsive Layout）
+分别为不同的屏幕分辨率定义布局，同时，在每个布局中，应用流式布局的理念，即页面元素宽度随着窗口调整而自动适配。
+可以把响应式布局看作是流式布局和自适应布局设计理念的融合。
+
+简单的说：
+静态布局：意思就是不管浏览器尺寸具体是多少，网页布局就按照当时写代码的布局来布置；
+自适应布局：就是说你看到的页面，里面元素的位置会变化而大小不会变化；
+流式布局：你看到的页面，元素的大小会变化而位置不会变化——这就导致如果屏幕太大或者太小都会导致元素无法正常显示。
+自适应布局：每个屏幕分辨率下面会有一个布局样式，同时位置会变而且大小也会变
+

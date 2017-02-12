@@ -1,0 +1,78 @@
+.btn{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border:1px solid #888;
+    outline: none;
+    border: 0;
+}
+.btn:focus{
+    box-shadow: 0 0 3px blue;
+}
+.btn-default{
+    background-color: #fff;
+}
+.btn-default:hover,
+.btn-default:focus{
+    background-color: #E6E6E6;
+}
+.btn-primary{
+    background-color: #428BCA;
+    color: #fff;
+}
+.btn-primary:hover,
+.btn-primary:focus{
+    background-color: #3070A8;
+}
+.btn-success{
+    background-color: #5CB85C;
+    color: #fff;
+}
+.btn-success:hover,
+.btn-success:focus{
+    background-color: #439B43;
+}
+.btn-info{
+    background-color: #5BC0DE;
+    color: #fff;
+}
+.btn-info:hover,
+.btn-info:focus{
+    background-color: #30ABCF;
+}
+.btn-warming{
+    background-color: #F0AD4E;
+    color: #fff;
+}
+.btn-warming:hover,
+.btn-warming:focus{
+    background-color: #EC971F;
+}
+.btn-danger{
+    background-color: #D9534F;
+    color: #fff;
+}
+.btn-danger:hover,
+.btn-danger:focus{
+    background-color: #C9302C;
+}
+.btn-link{
+    background-color: rgba(0,0,0,0);
+    color: #6BBAEC;
+}
+.btn-link:hover,
+.btn-link:focus{
+    text-decoration: underline;
+}
+.btn-lg{
+    width: 100px;
+    height: 50px;
+}
+.btn-sm{
+    width: 60px;
+    height: 40px;
+}
+.btn-xs{
+    width: 50px;
+    height: 30px;
+}

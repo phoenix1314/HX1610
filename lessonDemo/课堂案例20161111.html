@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <script>
+       var rows = 10;//上面正三角一共多少行星星
+       var length = rows*2-1;//一共多少列及多少行（这里行跟列是一样多），如果行数跟列数不一样就分开写
+       var mid = Math.floor(length/2);//计算每行的最中间是第几个（Math.floor是对括号里面的数向下取整）
+
+       for(var i = 0;i<length;i++){//第一次循环是对应行数
+           var row = i < mid ? i :mid - (i - mid);
+
+           var leftIndex = mid-row;//当打印下半部分星星的时候根据上面row的计算 leftindex = mid-(mid-(i-mid))=i-mid
+           var totals = 0;//每行的星星个数
+
+           for(var j = 0;j<length;j++){//第二次循环是对应每行的空格跟星星打印
+
+               if(j>=leftIndex && (j-leftIndex)%2==0 && totals<=row){//第一个条件：要打印星星必须>=leftIndex  第二个条件：必须是每个一个数打印一个星星  第三个条件：星星的总数不能大于本行的下标
+                   document.write("*");
+                   totals++;
+               }else{
+                   document.write("-");
+               }
+           }
+           document.write("<br/>");
+       }
+       /*正三角*/
+
+//              for(var i = 0;i<rows;i++){
+//                  var row = i;//表示第几行（从0开始算）
+//
+//                  var leftIndex = mid-row;//每行最左边星星的位置（比如第一行星星的位置是放第十个，由于这个位置也是从零开始算，所以这里它的位置为9）
+//                  var totals = 0;//每行的星星个数
+//
+//                  for(var j = 0;j<length;j++){
+//
+//                      if(j>=leftIndex && (j-leftIndex)%2==0 && totals<=row){//第一个条件：要打印星星必须至少在这行星星的()  第二个条件：必须是每个一个数打印一个星星  第三个条件：星星的总数不能大于本行的下标
+//                          document.write("*");
+//                          totals++;//每行每输入一个星星，累加一次星星的个数，直到这一行循环完
+//                      }else{
+//                          document.write("&nbsp;");
+//                      }
+//                  }
+//                  document.write("<br/>");
+//              }
+
+
+
+       /*倒三角*/
+//       for(var i = 0;i<rows;i++){
+//
+//           var leftIndex = i;
+//           var totals = 1;//每行的星星个数
+//
+//           for(var j = 0;j<length;j++){
+//
+//               if(j>=leftIndex && (j-leftIndex)%2==0 && totals<=(rows-i)){//第一个条件：要打印星星必须>=leftIndex  第二个条件：必须是每个一个数打印一个星星  第三个条件：星星的总数不能大于本行的下标
+//                   document.write("*");
+//                   totals++;
+//               }else{
+//                   document.write("-");
+//               }
+//           }
+//           document.write("<br/>");
+//       }
+
+
+
+   </script>
+</body>
+</html>

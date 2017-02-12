@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/tools/jq3.js"></script>
+    <script src="../js/plugs/webSQL.js"></script>
+    <script src="../js/plugs/table.js"></script>
+    <title>webSQL</title>
+    <script>
+        $(function () {
+
+            var tableW = new table(400,1200);
+            tableW.init("frame");
+            tableW.setTextDeclare("websql 增删改查");
+            /**创建table*/
+            tableW.createTable("brand");
+
+            /**table的表头th*/
+            var arryTh = ["id","name","category_id","origin_id","img","price","operate"];
+            tableW.setTh(arryTh);
+
+            /**创建数据库*/
+            //var colStr = ["id integer primary key","name varchar(32)","category_id int(32)","origin_id int(32)","img varchar(32)","price int(32)"];
+            var colName = ["id","name","category_id","origin_id","img","price"];
+            tableW.dbInit("brandData","brand",colName,colName);
+
+            /**表格操作*/
+            tableW.setBtnAdd("增加一行");
+            tableW.setDropTable("全部删除");
+            tableW.setSelect("查询数据");
+
+        })
+    </script>
+</head>
+<body>
+<div id="frame" style="overflow-y: auto">
+
+</div>
+</body>
+</html>

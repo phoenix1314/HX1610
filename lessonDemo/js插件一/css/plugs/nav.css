@@ -1,0 +1,36 @@
+.nav-list{
+    height: 45px;
+    margin-top: 10px;
+}
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    /*width: 200px;*/
+    /*margin: 0 auto;*/
+    overflow: hidden;
+    cursor: pointer;
+}
+.nav > li{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+    float: left;
+    margin-bottom: -1px;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #ddd;
+}
+.nav > li:hover {
+    background-color: #ddd;
+}
+.nav > li.active,
+.nav > li.active:hover,
+.nav > li.active:focus {
+    color: #555;
+    cursor: default;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}

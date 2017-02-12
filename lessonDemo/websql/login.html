@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jq.js"></script>
+    <script src="SQLITE3.js"></script>
+    <script>
+        $(function(){
+          var mydb = new SQLITE();
+            mydb.init();
+            function chekLogin(result){
+              if( result.rows.length==1){
+                  alert("login success");
+              }else{
+                  alert("login error");
+              }
+            }
+
+            $("#reg").on("click",function(){
+                var usr = $("#usr").val();
+                var pwd = $("#pwd").val();
+                var sql = "insert into hx1610(name,password) values(?,?)";
+                mydb.add(sql,usr,pwd);
+            })
+            $("#login").on("click",function(){
+                var usr = $("#usr").val();
+                var pwd = $("#pwd").val();
+                var sql="select * from hx1610 where name='"+usr+"' and password='"+pwd+"'";
+                mydb.getAll(sql,chekLogin);
+
+            })
+        })
+    </script>
+</head>
+<body>
+用户名<input type="text" id="usr">
+密码<input type="text" id="pwd">
+<button id="reg">注册</button>
+<button id="login">登陆</button>
+
+</body>
+</html>

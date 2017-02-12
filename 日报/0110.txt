@@ -1,0 +1,38 @@
+标题 2017.01.10 js面向对象
+
+课程内容：
+回顾css封装插件
+1、js入门-面向对象编程即封装
+2、javascript是一种基于对象（object-based）的语言，你遇到的所有东西几乎都是对象。但是，它又不是一种真正的面向对象编程（OOP）语言，因为它的语法中没有class（类）。那么，如果我们要把"属性"（property）和"方法"（method），封装成一个对象，甚至要从原型对象生成一个实例对象。通过以下例子引入：
+Javascript提供了一个构造函数（Constructor）模式。
+所谓"构造函数"，其实就是一个普通函数，但是内部使用了this变量。对构造函数使用new运算符，就能生成实例，并且this变量会绑定在实例对象上。
+假定把学生看成一个对象，有名字，年龄，学号，性别 4个属性，showInfo方法
+function student(id,name,age,sex){
+            this.no = id;
+            this.usrName=name;
+            this.usrAge = age;
+            this.usrSex = sex;
+            this.showInfo=function(){
+                console.log(this.usrName+"的学号是"+this.no+"号")
+            }
+
+        }
+根据模型对象，生成 三个实例的对象
+var zs = new student(1,"zhangshan",18,"man");
+        var ls = new student(2,"lisi",21,"woman");
+        var ww = new student(3,"wangwu",22,"woman");
+        var a =[];
+        a.push(zs,ls,ww);
+        for(var i = 0; i < a.length;i++){
+            if(a[i].usrAge >20){
+                console.log(a[i].usrName);
+            }
+        }
+
+3、this的用法
+
+作业情况：已完成
+
+遇到问题：创建div后，如何在div里面嵌套其他标签如p，span，button，如何改变button的样式
+
+心得体会：尝试了this的用法，在不同的地方表示的不一样，用起来需要特别的注意。

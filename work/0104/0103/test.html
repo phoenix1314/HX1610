@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".btn1").click(function(){
+				console.log("click*******")
+				// $("p").attr("class",function(i,value){
+				// 	alert("i:"+i+" vale: "+value);
+				// })
+				$("span").clone().append(".p1")
+			})
+		})
+	</script>
+</head>
+<body>
+<div id="div1">
+<p class="p1">111</p>
+<p class="p2">222</p>
+<p class="p3">333</p>	
+<span class="span"> swsddd</span>
+<br />
+<button class="btn1" id="clone">clone</button>
+</div>
+
+</body>
+</html>

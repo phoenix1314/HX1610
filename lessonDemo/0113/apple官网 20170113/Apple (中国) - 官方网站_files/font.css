@@ -1,0 +1,113 @@
+/*Web Font 2016-10-22*/
+html[lang=zh-CN] .centeralign {
+    padding-left: 0.4em;
+}
+
+html[lang=zh-CN] .centeralignevent {
+    padding-left: 0.6em;
+}
+
+html[lang=zh-CN] .page-home .homepage-headline .font-adjustment-1 {font-size:37px;vertical-align: 1px;}
+html[lang=zh-CN] .page-home .homepage-headline .font-adjustment-2 {font-size:37px;}
+
+@media only screen and (max-width: 1068px) {
+html[lang=zh-CN] .page-home .homepage-headline .font-adjustment-1 {font-size:34px;vertical-align: 1px;}
+html[lang=zh-CN] .page-home .homepage-headline .font-adjustment-2 {font-size:34px;}
+}
+
+@media only screen and (max-width: 735px) {
+html[lang=zh-CN] .page-home .homepage-headline .font-adjustment-1 {font-size:29px;vertical-align: 1px;}
+html[lang=zh-CN] .page-home .homepage-headline .font-adjustment-2 {font-size:29px;}
+}
+
+@media only screen and (max-width: 735px) {
+    nav ul, nav ol {
+      margin: 0;
+    }
+}
+
+.homepage-headline {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+@media only screen and (max-width: 1068px) {
+    .homepage-headline {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .homepage-headline {
+        font-size: 30px;
+        line-height: 1.1;
+    }
+}
+
+#homepage-gallery-iphone .homepage-headline {
+    font-size: 42px;
+    line-height: 1;
+}
+
+@media only screen and (max-width: 1068px) {
+    #homepage-gallery-iphone .homepage-headline {
+        font-size: 38px;
+        line-height: 1;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    #homepage-gallery-iphone .homepage-headline {
+        font-size: 32px;
+        line-height: 1;
+    }
+}
+
+.enhanced-gallery .gallery-item-gift-guide .homepage-headline { font-size: 60px;}
+@media only screen and (max-width: 735px) {.enhanced-gallery .gallery-item-gift-guide .homepage-headline { font-size: 44px; }}
+@media only screen and (max-width: 370px){.enhanced-gallery .gallery-item-gift-guide .homepage-headline { font-size: 35px; }}
+
+.enhanced-gallery .gallery-item-gift-guide span.more {font-size: 22px;}
+@media only screen and (max-width: 370px){.enhanced-gallery .gallery-item-gift-guide span.more {font-size: 20px;}}
+@media only screen and (max-width: 375px){.enhanced-gallery .gallery-item-gift-guide span.more {font-size: 18px;}}
+ 
+@media only screen and (max-width: 370px){.left{margin-left: 20px;}}
+@media only screen and (max-width: 370px){.enhanced-gallery .gallery-item-gift-guide .homepage-headline {margin-bottom:0px;}}
+
+.left{ 
+        margin-left: 1em;}
+        
+/* gallery-item-new-years */
+html[lang=zh-CN] .beats-offer-banner .table-label{line-height: 1.2;}
+@media only screen and (max-width: 1068px) {
+    html[lang=zh-CN] .beats-offer-banner .table-label {
+        line-height: 1.25;
+    }
+}
+@media only screen and (max-width: 735px) {
+    html[lang=zh-CN] .beats-offer-banner .table-label {
+        line-height: 1.11;
+    }
+}
+
+.enhanced-gallery .gallery-item-new-years .homepage-headline {
+    font-size: 38px;
+}
+
+@media only screen and (max-width: 1068px) {
+    .enhanced-gallery .gallery-item-new-years .homepage-headline {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .enhanced-gallery .gallery-item-new-years .homepage-headline {
+        font-size: 18px;
+    }
+}
+
+html[lang=zh-CN] .beats-offer-banner .more{font-size: 17px;}
+@media only screen and (max-width: 735px) {
+	html[lang=zh-CN] .beats-offer-banner .more{font-size: 17px;}
+}

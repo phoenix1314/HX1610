@@ -1,0 +1,228 @@
+/*/*qq面板*/
+#panelQQ{
+	width: 300px;
+	height: 400px;
+/*	border: 1px red solid;*/
+	border-radius: 5px 5px 0px 0px;
+	background-image: url(../images/panelQQ.jpg);
+	margin-left: 305px;
+	box-shadow: 2px 2px 2px gray;
+	position: absolute;
+}
+
+/*qq面板-上半部*/
+#panelTop{
+	width: 300px;
+	height: 80px;
+	/*border: 1px purple solid;*/
+	border-radius: 5px 5px 0px 0px;
+}
+
+#panelTop img{
+	width: 40px;
+	height: 40px;
+	margin-left: 20px;
+	margin-top: 20px;
+	border-radius: 5px;
+	position: absolute;
+}
+
+#panelTop span{
+	float: left;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+/*添加区域*/
+#search{
+	width: 300px;
+	height: 20px;
+/*	border: 1px yellow solid;*/
+}
+
+.searchText{
+	width: 250px;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+.addBtn{
+	float: right;
+}
+
+/*好友列表*/
+#group{
+	width: 298px;
+	height: 200px;
+	border: 1px pink solid;
+	overflow-y: auto;
+	display: inline-block;
+
+}
+
+#group ul li{
+	list-style-type: none;
+}
+
+#group p{
+	display: inline-block;
+}
+
+#group img{
+	width: 30px;
+	height: 30px;
+}
+
+/*菜单选项操作*/
+#option{
+	width: 300px;
+	height: 50px;
+/*	border: 1px blue solid;*/
+}
+
+#option button{
+	width: 75px;
+	height: 50px;
+	float: left;
+	background-image: url(../images/panelQQ.jpg);
+/*	background: linear-gradient(rgba())*/
+}
+
+/*全选 反选等操作*/
+#handle{
+	width: 300px;
+	height: 40px;
+	margin-top: 5px;
+	text-align: center;
+	border-radius: 0px 0px 5px 5px; 
+}
+
+/*个人资料*/
+#personal{
+	width: 200px;
+	height: 300px;
+	margin-left: 100px;
+	margin-top: 50px;
+	/*float: left;
+*/	background-image: url(../images/data_bk.jpg);
+	position: absolute;
+	box-shadow: 2px 2px 2px gray;
+	border-radius: 5px;
+}
+
+/*#personal button{
+	float: right;
+	border-radius: 5px 5px 0px 0px;
+	background:linear-gradient(to top,rgba(247,196,203,0),rgba(247,196,203,1));
+}*/
+
+#personal img{
+	width: 60px;
+	height: 60px;
+	margin-left: 1em;
+	margin-top: 2em;
+}
+
+#personal p{
+	margin-left: 1em;
+}
+
+/*聊天弹框*/
+#chat{
+	width: 500px;
+	height: 400px;
+	background-image: url(../images/data_bk.jpg);
+	box-shadow: 2px 2px 5px gray;
+	margin-left: 615px;
+	float: left;
+	position: absolute;
+	border-radius: 5px;
+}
+
+/*聊天框-上部分*/
+#chatTop{
+	width: 500px;
+	height: 35px;
+	border-bottom: 1px gray groove;
+	border-radius: 5px 5px 0px 0px;
+}
+
+#chatTop p{
+	text-align: center;
+}
+
+#chatTop button{
+	float: right;
+	width: 80px;
+	height: 50px;
+	position: absolute;top: 0px;right: 0px;
+	border-radius: 5px 5px 0px 0px;
+	background:linear-gradient(to top,rgba(247,196,203,0),rgba(247,196,203,1));
+/*	color: white;*/
+}
+
+/*聊天-消息显示框*/
+#chatMessage{
+	width: 500px;
+	height: 285px;
+	overflow-y: auto;
+/*	border: 1px red solid;*/
+}
+
+#chatMessage img{
+	width: 20px;
+	height: 20px;
+}
+
+#receive{
+	margin-left: 10px;
+	margin-top: 10px;
+	position: relative;
+}
+
+#receive p{
+	color: red;
+}
+
+.sender{
+	float: right;
+/*	position: relative;*/
+	margin-right: 10px;
+}
+
+.sender p{
+	color: red;
+}
+
+
+/*聊天发送区域*/
+#chatSend{
+	width: 500px;
+	height: 60px;
+	border-top: 1px gray groove;
+/*	border: 1px blue solid;*/
+	border-radius: 0px 0px 5px 5px;
+}
+
+#chatSend img{
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+	position: absolute;
+}
+
+#chatSend input{
+	width: 350px;
+	height: 45px;
+	position: relative;top: 6px;left: 50px;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+#chatSend button{
+	width: 80px;
+	height: 45px;
+	float: right;
+	position: relative;top: 10px;right: 10px;
+	background:linear-gradient(to top,rgba(21,160,245,0),rgba(21,160,245,1));
+	color: white;
+}

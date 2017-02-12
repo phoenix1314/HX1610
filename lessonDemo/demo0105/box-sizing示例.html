@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>box-sizing</title>
+	<style type="text/css">
+    .content-box{
+        box-sizing:content-box;
+        -moz-box-sizing:content-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #E6A43F;
+        background: blue;
+    }
+   /* box-sizing:padding-box;w3c里面已经没有出现了。*/
+/*    .padding-box{
+        box-sizing:padding-box;
+        -moz-box-sizing:padding-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #186645;
+        background: red;                
+    }*/
+    .border-box{
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #3DA3EF;
+        background: yellow;
+    }
+</style>
+</head>
+<body>
+<div class="content-box">content-box:border和padding不计算入width之内.</div>
+<!-- <div class="padding-box">padding-box:padding计算入width内</div> -->
+<div class="border-box">border-box:border和padding计算入width之内</div>
+</body>
+</html>

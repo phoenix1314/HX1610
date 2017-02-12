@@ -1,0 +1,35 @@
+设置自动增长的初始值
+delete from sqlite_sequence where name='TableName';        --注意表名区分大小写  
+  
+update sqlite_sequence SET seq = 0 where name = 'TableName'; 
+
+in
+
+delete form stu where id in(1,2,3,4) //删除id为1234的记录
+
+1)查询选修了 MySQL 的学生姓名；
+
+select name from stu where stu_id in(
+(select stu_id from mark where kc_id in
+(select kc_id from course where name='mysql')))
+
+2)查询不及格学生的名字
+select name from stu where stu_id
+in(select stu_id from mark where scoure < 60)
+
+select * from messages limit 0,2;
+select * from messages limit 2,2;
+select * from messages limit 4,2;
+limit 后面2个数字 第一个表示从第几条记录开始（基数为0）
+                  第2个表示你要显示几条
+
+
+
+******多表查询
+   in 子查询
+   连表查询
+order by desc /asc //limit 可以取到第一条数据
+group by //分组，去重复
+limit//分页
+like//模糊查找
+sqlite 自带的一些函数  数学(count sum) 分组（max min ） 日期函数

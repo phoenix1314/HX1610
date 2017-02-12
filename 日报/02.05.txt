@@ -1,0 +1,39 @@
+标题： 2017.02.05 知识点回顾
+1、回顾第一阶段的知识点，好陌生的说
+2、回顾jq，css3，js插件封装，html5新特性
+3、重新讲解websql的用法
+openDatabase:访问数据库，没有则创建；
+var db=openDatabase（"文件名","版本",'描述',2*1024）;
+transaction： 控制事务提交或回滚；
+executeSql： 执行sql语句创建，增删改查操作；
+db.transaction(function(tx){
+tx.executeSql('create table tablename()',[参数],
+function（tx,result）{},function(tx,msg){   
+});
+通过查询的返回值判断是否匹配成功
+ db.transaction(function(tx){
+                    tx.executeSql("select count(*) as num from info where name=? and password=?",[usr,pwd],function(ret,result){
+                        if(result.rows[0].num==1){
+                            alert("login success");
+                        }else{
+                            alert("login error");
+                        }
+
+                    },function(ret,msg){
+                        alert("error:"+msg.message);
+                    });
+
+遇到问题：websql封装，通过类来调用方法。由于查询带有返回值数据，如果直接放在类里面处理，看起来比较杂乱
+，想放外部处理
+
+解决方案：通过全局回调函数方法，即查询执行完毕时，调用回调函数进行 处理
+
+作业情况：已完成。
+
+心得体会：websql封装搞了好久了，一直卡在查询的返回值数据，怎么提供给外部使用，这个问题昨天就尝试了各种方法，都快崩溃了，
+还是没有完成。
+在尝试的过程中，知道了如果有回调函数，执行时，是没有等待回调执行完，而是直接执行下一个函数。
+总之，有想法，不管是对的还是错的，去尝试方案，不要丢弃，可以得到意外的收获，昨天用回调函数没搞清楚，没坚持调试分析放弃了。
+今天在研究下，终于把查询select的封装返回值提供外部使用。做出来了，好有成就感！(*^__^*) 嘻嘻……，给自己一个赞！！！
+
+

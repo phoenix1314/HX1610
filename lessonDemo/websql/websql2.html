@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+       var db =  openDatabase("hx161011","2.0","sqlite",2*1024);
+       var sqlCreat="create table if not exists info(stuid integer primary key autoincrement,name varchar(32),password varchar(32))";
+       var sqlAdd = "insert into info(name,password) values('lisi','654321')";
+       var sqlSelect="select * from info";
+       db.transaction(function(){},function(){},function(){})
+       db.transaction(function(tx){
+        tx.executeSql(sqlCreat,[],function(){
+           // alert("success");
+        }, function(ret,msg){
+            alert(msg.message);
+        });
+//        tx.executeSql(sqlAdd,[],function(ret,msg){
+//               alert("add success");
+//           },function(ret,msg){
+//               alert("add error:"+msg.message);
+//           });
+//        tx.executeSql(sqlSelect,[],function(ret,result){
+//            alert(result.rows[0].password);
+//
+//        },function(ret,msg){alert("select error:"+msg.message)})
+      },function(){
+
+      },function(){
+        //  alert("dbsuccess")
+      });
+
+    </script>
+
+    <script>
+        window.onload=function(){
+
+
+
+            document.getElementById("login").onclick=function(){
+                var usr =    document.getElementById("usr").value;
+                var pwd =    document.getElementById("pwd").value;
+                var db =  openDatabase("hx161011","2.0","sqlite",2*1024);
+                db.transaction(function(tx){
+                    tx.executeSql("select count(*) as num from info where name=? and password=?",[usr,pwd],function(ret,result){
+                        if(result.rows[0].num==1){
+                            alert("login success");
+                        }else{
+                            alert("login error");
+                        }
+
+                    },function(ret,msg){
+                        alert("error:"+msg.message);
+                    });
+                },function(){},function(){})
+            }
+        }
+    </script>
+
+</head>
+<body>
+usr:<input type="text" id="usr">
+pwd:<input type="password" id="pwd">
+<button id="login">login</button>
+</body>
+</html>

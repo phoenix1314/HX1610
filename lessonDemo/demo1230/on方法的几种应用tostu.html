@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo on()</title>
+	<script type="text/javascript" src="jq.js">//jq版本1.11</script>
+
+</head>
+<body>
+<div id="div1">
+<p>div1 p1</p>
+<p>div1 p2</p>
+</div>
+<div id="div2">div2</div>
+<button id="btn1">解绑p的点击事件</button>
+
+	<input type="text" name="" value="">
+	<br />
+	<button id="btn2">触发select</button>
+	<button id="btn3">触发myEvent</button>
+
+	<script type="text/javascript">
+	//on() 官方推荐的绑定事件方法
+		//$(selector).on(event,childSelector,data,function,map)
+		$('p').on('click',function(){
+			alert("oh~~");
+		})
+
+		//以前常见的几个方法
+		//1、 delegate()
+		// $('#div1').delegate('p','click',function(){
+		// 	$(this).css('color','pink');
+		// })
+
+		//用on方法替代
+		$('#div1').on('click','p',function(){
+			$(this).css('background-color','black');
+		})
+
+		//2、bind()
+		// $('#div2').bind('click',function(){
+		// 	$(this).css('background-color','green');
+		// })
+
+		//3、live() 已经被取消使用了。
+		// $('#div2').live('click',function(){
+		// 	$(this).css('background-color','yellow');
+		// })
+		//以上3种以前的方法，均建议都用on()方法代替
+
+
+		//off()：移除on()绑定的方法
+		$('#btn1').click(function(){
+			$('p').off('click');
+		})
+
+		//one()：事件只做一次的操作
+		$('p').one('click',function(){
+			$(this).animate({fontSize:'+=6px'});//驼峰写法
+		})
+
+		//trigger() 触发事件，相当于模拟用户行为，使得事件发生。
+		//当 textarea 或文本类型的 input 元素中的文本被选择（标记）时，会发生 select 事件。
+		$('input').select(function(){
+			$('input').after("<span>Text marked!</span>");
+		})
+
+		$('#btn2').click(function(){
+			$('input').trigger('select');
+		})
+		$('#btn2').click(function(){
+			$('input').triggerHandler('select');//只触发一次。
+		})
+
+		//注意：使用trigger方法触发一个文本类型的 input 元素的select事件时。chrome浏览器会触发三次，firefox和ie11会正常触发一次。
+		//triggerHandler()触发一次 不触发默认行为。
+
+
+		//多个事件绑定同一个函数
+		$('#div2').on("mouseover mouseout",function(){
+			
+		})
+
+		//多个事件绑定不同函数
+		$('#div2').on({
+			mouseover:function(){ },
+			mouseout:function(){ },
+			click:function(){ }
+		})
+
+		//绑定自定义事件
+		$('#div2').on('myEvent',function(e,shown){
+			$(this).text("显示名字："+shown);
+		})
+		$('#btn3').click(function(){
+		    $("#div2").trigger('myEvent',['张一鸣'])
+
+		})
+
+
+		//传递数据到函数
+		$("#div2").on('click',{msg:"传进来的数据XXX"},function(e){
+			alert(e.data.msg);
+		})
+
+
+
+	</script>
+</body>
+</html>

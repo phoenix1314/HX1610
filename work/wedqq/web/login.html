@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<script type="text/javascript" src="../js/jq3.js"></script>
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var $inputText = $("input[type='text']");
+			var $inputPassword = $("input[type='password']");
+			var textVal = "";
+			var passwordVal = "";
+			//输入账号
+			$(".account").on("keyup",function(){
+				textVal = $inputText.val();
+				console.log("textVal: "+textVal);
+			})
+
+			//输入密码
+			$(".password").on("keyup",function(){
+				passwordVal = $inputPassword.val();
+				console.log("passwordVal: "+passwordVal);
+			})
+
+            //点击登录
+			$(".loginBtn").on("click",function(){
+				if(textVal==="" || passwordVal==="")
+				{
+					console.log("account and password is null");
+					alert("账号或密码为空，请输入！");
+				}
+				else{
+					console.log("open qq web index");
+					window.location.href="indexqq.html";
+				}
+			})
+
+
+		}) //
+	</script>
+</head>
+<body>
+
+<div id="login">
+
+<div id="loginTop">
+	<button class="close"> X </button>
+</div>
+<div id="loginPanel">
+    <img src="../images/head_bk.jpg">
+	<div class="accountInfo">
+	<input type="text" class="account" value="">
+	<input type="password" class="password">	
+	<button class="loginBtn">登  录</button>
+	</div>
+</div>
+	
+</div>
+
+</body>
+</html>

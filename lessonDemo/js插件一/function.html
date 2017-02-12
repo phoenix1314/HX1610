@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function show(){
+            console.log("this is show");
+        }
+        function show1(){
+            console.log("this is show1");
+        }
+
+        function fnTest(xx,fn){
+            xx();
+            fn();
+
+        }
+
+        fnTest(show,show1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

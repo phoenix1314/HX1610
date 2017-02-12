@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+	#input1{
+		border: 1px solid black;
+		width: 500px;
+		height: 50px;
+	}	
+
+	#screen{
+		border: 1px solid black;
+		width: 500px;
+		height: 500px;
+	}
+	</style>
+
+	<script type="text/javascript">
+		// window.onload = function(){
+
+
+		function iSSue(){
+			var Op=document.createElement("p");//创建一个p节点
+			var weibo_content=document.getElementById("weibo").value;//将文本框weibo的值赋值给变量
+			var Otext=document.createTextNode(weibo_content);//创建一个内容是文本框weibo的值的文本节点
+			Op.appendChild(Otext);//把文本节点加入到p节点里
+			var Oshow=document.getElementById("screen");//获取指定ID是“screen”的div节点
+			// Oshow.appendChild(Op);//把p节点加入到指定的div节点里
+			// document.body.appendChild(Oshow);
+			Oshow.insertBefore(Op,Oshow.children[0]);
+
+			var oBtn = document.createElement("button");
+			oBtn.innerHTML="删除";
+			Op.appendChild(oBtn);
+			oBtn.onclick=function(){
+				//方法1
+				this.parentNode.parentNode.removeChild(this.parentNode);
+				//this     按钮
+				//this.parentNode   p段落   即Op
+				//this.parentNode.parentNode   div   即Oshow
+				
+				//方法2
+				// Oshow.removeChild(Op);
+			}
+
+
+
+
+
+		}
+
+
+		// }
+
+
+		
+	</script>
+</head>
+<body>
+	<div id="input1">
+	<input id="weibo" type="text" name="" value="">
+	<input type="button" name="" value="发表" onclick="iSSue()">
+	<input type="button" name="" value="替换">
+	</div>
+
+	<div id="screen">
+	
+		
+	</div>
+
+</body>
+</html>

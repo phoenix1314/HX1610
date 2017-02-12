@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo </title>
+	<style type="text/css">
+		.style1{
+			color: pink;
+			font-size: 19px;
+		}
+	</style>
+	<script type="text/javascript" src="jq3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+
+			$("p").text(function(i,old){
+				// alert("i="+i+",old="+old);
+				$("p").eq(i).text(old+"new");
+
+			})
+
+
+			// $("#div1").on("click","p",function(){
+			// 	$(this).css({
+			// 		"color":"red",
+			// 	})
+			// })
+
+			//add para
+			$("#btn1").on("click",function(){
+				var a="Hello";
+				$("#div1").append("<p>aaaa</p>");//内部添加
+				$("<p>bbbb</p>").appendTo("#div1");
+
+				$("#div1").prepend("<p>aaaa</p>");//内部添加，头部
+				$("<p>bbb<span>44</span>"+a+"</p>").prependTo("#div1");
+
+
+				//before after
+				// $("#div1").before("<span>qqqq</span>");//外部添加
+				// $("#div1").after("<span>qqqq</span>");//外部添加
+
+
+			})
+			$("#btn2").click(function(){
+				$("p").toggleClass("style1");
+
+				//css()   addClass()   removeClass()
+
+				// $("#div1").empty();
+				//empty   remove   detach
+			})
+
+
+		})//ready
+	</script>
+</head>
+<body>
+<!-- <span></span> -->
+<div id="div1">
+	<p>1111</p>
+	<p>22222</p>
+	<!-- <p>aaaa</p> -->
+</div>
+<button id="btn1">addP</button>
+<button id="btn2">delall</button>
+
+</body>
+</html>

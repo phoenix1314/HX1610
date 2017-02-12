@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jq3.js"></script>
+    <script src="webSQL.js"></script>
+    <script>
+        $(function(){
+            $("#btn").on("click",function(){
+                console.log("len = "+$("#login").val().length);
+                var $inputText = $("input[type='text']");
+                var $inputPassword = $("input[type='password']");
+                var account = $inputText.val();
+                console.log("account = "+account);
+                var pwd = $inputPassword.val();
+                console.log("pwd = "+pwd);
+                var db = new webSQL();
+                var arry = ["id ","name "];
+                db.create("brand",arry);
+                var arry11 = ["id","name"];
+                var login = [account,pwd];
+                db.insert("brand",arry11,login);
+            })
+        })
+    </script>
+</head>
+<body>
+<div>
+    帐号：
+    <input type="text" id="login">
+    <br>
+    <br>
+    密码：
+    <input type="password" id="pwd">
+    <br>
+    <br>
+    <button id="btn">登录</button>
+</div>
+</body>
+</html>

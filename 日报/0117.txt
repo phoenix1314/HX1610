@@ -1,0 +1,47 @@
+标题： 2017.01.17 sqlite
+课程内容：
+1、设置自动增长的初始值
+delete from sqlite_sequence where name='TableName';        --注意表名区分大小写  
+  
+update sqlite_sequence SET seq = 0 where name = 'TableName';  注意set要大写
+
+2、in执行里面的集合
+
+3、SQLite分页：用limit 
+select * from messages limit 0,2;
+select * from messages limit 2,2;
+select * from messages limit 4,2;
+limit 后面2个数字 第一个表示从第几条记录开始（基数为0）
+                  第2个表示你要显示几条
+
+4、as或者 alias 表示的是列的别名
+
+5、内连接 inner join on 其中inner可省略
+
+6、between..and闭区间 头和尾都包含
+
+7、like模糊查询 和%，_配对其中
+%(百分号)：用来表示零个或多个的任意字符。
+_(下划线)： 用来表示一个任意的字符。
+
+8、order by desc /asc //limit 可以取到第一条数据
+group by //分组，去重复
+
+9、distinct 仅有的，去重复；
+
+
+心得体会：遇到不懂或者难解的题，不要急于求成，先要笨的方法：先把问题一步一步的分解出来，一个个条件的满足，可以先考虑一个个表的去查询结果，再把查询的结果嵌套，组织起来就能得到想要的结果了。通过这种方式，看下能不能不用嵌套的方法，再考虑采用多表查询的方式查找结果，这样或者就容易想到解决问题的方法。
+
+select * from score,course,stu where score.stu_id = stu.stu_id and course.kc_id = score.kc_id;
+
+select * from course where not exists (select * from score,course,stu where score.stu_id = stu.stu_id and course.kc_id = score.kc_id);
+
+select name from stu where not exists (select * from course where not exists (select * from score,course,stu where score.stu_id = stu.stu_id and course.kc_id = score.kc_id));
+
+
+
+select kc_id from course where not kc_id in (select course.kc_id from score,course,stu where score.stu_id = stu.stu_id and course.kc_id = score.kc_id);
+
+select kc_id from course where kc_id in (select course.kc_id from score,course,stu where score.stu_id = stu.stu_id and course.kc_id = score.kc_id);
+
+select stu_id from score where kc_id in(select kc_id from course where kc_id in (select course.kc_id from score,course,stu where score.stu_id = stu.stu_id and course.kc_id = score.kc_id));

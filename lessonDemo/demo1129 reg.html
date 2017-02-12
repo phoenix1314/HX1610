@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo regExp</title>
+</head>
+<body>
+
+<input id='pwd' type="text" name="">
+<span id="message"></span>
+
+
+<script type="text/javascript">
+	var str="1ee4ty8a77ed";
+	var rel = str.match(/8/g);//   \d   +   {1,}
+	// alert(rel);//1,4,8
+    var patt=/^[a-zA-Z]\w{5,15}$/ig;
+    // alert(pwd.match(patt));
+
+
+var oPwd = document.getElementById("pwd");
+var oSpan = document.getElementById("message");
+oPwd.onblur = function(){
+	var result = oPwd.value.match(patt);
+	// alert(result);
+	if (result) {
+		oSpan.innerHTML="ok";
+	}
+	else{
+		oSpan.innerHTML="no";
+	}
+}
+    // patt = /.$/
+	// var rel = str.match(/\D+/ig);
+	// // alert(rel);
+	var tel = "13429867585";
+	var rel2 = tel.match(/^[1]\d{10}$/);
+	// alert(rel2);
+
+</script>
+</body>
+</html>

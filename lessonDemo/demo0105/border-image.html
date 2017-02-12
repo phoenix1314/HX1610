@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>border-image</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	div{
+		border:15px solid transparent;
+		width:250px;
+		padding:10px 20px;
+		
+
+	}
+	.div1{
+		border-image:url(border.png) 30 30 stretch;
+	}
+	.div2{
+		border-image:url(border.png) 30 30 round;
+	}
+	</style>
+</head>
+<body>
+<img src="border.png">原图
+<hr>
+<div class="div1">stretch</div>
+<hr>
+<div class="div2">round</div>
+</body>
+</html>

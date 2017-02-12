@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<input type="text" name="user1" id="user1" value="username">
+<p id="test">Hello World!</p>
+<p>Hi Boys!</p>
+
+<script type="text/javascript">
+//alert($("#user1").val());//测试引入js库成功。
+
+$("#test").html();//等价于下面那一句
+document.getElementById("test").innerHTML;
+
+//约定：jQuery对象的变量命名前面加上美元符号$。
+//DOM对象转化为jQuery对象：$(DOM对象)
+var oP = document.getElementById("test");
+var $oP1 = $(oP);
+//alert($oP1.html());
+
+//jQuery对象转化为DOM对象：jQuery对象[index]，或者 jQuery对象.get(index).
+//jQuery对象本质是数组对象。
+var $oP = $("#test");
+var oP2 = $oP[0];
+var oP3 = $oP.get(0);
+//alert(oP2.innerHTML);
+//alert(oP3.innerHTML);
+	
+//jQuery数组取到其中的单个元素
+var $aP = $("p");
+//alert($aP[1].html());//报错html()is not a function，因为$aP[1]这种方式以及将jQuery对象转化为DOM对象了。
+//alert($aP[1].innerHTML);//成功。innerHTML是DOM的属性方法。
+
+//alert($aP.eq(1).html());//eq(index)可以指定到具体某一个元素上，index可以为负值（从结尾处以1开始数数）。
+
+//遍历jQuery对象数组
+$aP.each(function(){
+alert($(this).html());//注意 this 是属于DOM对象，jQuery使用时要进行转化。
+});
+
+
+</script>
+
+</body>
+</html>

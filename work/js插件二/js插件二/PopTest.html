@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/tools/jquery-3.1.1.js"></script>
+    <script src="js/plugs/PopWindow.js"></script>
+    <script>
+        function showIndex(){
+            alert("this is index....");
+        }
+        function exitIndex(){
+            alert("this is exit....");
+        }
+        $(function(){
+            $("#bt1").on("click",function(){
+                 var popW = new PopWindow(200,100);
+                popW.init();
+                popW.setTitle("输入非法");
+                popW.setMessage("内容超过20000字");
+                popW.setLeftButton("okkk",showIndex);
+                popW.setRightButton("exit");
+                popW.setPosition(400,300);
+            })
+
+            $("#bt2").on("click",function(){
+                var popW = new PopWindow(500,300);
+                popW.init();
+                popW.setPosition(200,300);
+            })
+        })
+    </script>
+</head>
+<body>
+
+         <button id="bt1">点我</button>
+         <button id="bt2">zai点我</button>
+
+         <div id="divTest">
+         </div>
+</body>
+</html>

@@ -1,0 +1,1031 @@
+.enhanced-gallery .gallery-image-macbookpro {
+    background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_large.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_large_2x.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_xlarge.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_xlarge_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_medium.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_small.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_small_2x.jpg")
+    }
+}
+
+@media screen and (max-aspect-ratio: 4 / 3) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_portrait_large.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 4 / 3) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 4 / 3) and (min-resolution: 1.5dppx), screen and (max-aspect-ratio: 4 / 3) and (-webkit-min-device-pixel-ratio: 1.5), screen and (max-aspect-ratio: 4 / 3) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_portrait_large_2x.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 4 / 3) and (max-width: 1068px) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_portrait_medium.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 4 / 3) and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 4 / 3) and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-aspect-ratio: 4 / 3) and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_portrait_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 4 / 3) and (max-width: 735px) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_portrait_small.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 4 / 3) and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 4 / 3) and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-aspect-ratio: 4 / 3) and (max-width: 735px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-macbookpro {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/macbookpro_portrait_small_2x.jpg")
+    }
+}
+
+.enhanced-gallery .logo-image-event {
+    background-image: url("http://images.apple.com/cn/home/images/gallery/logo_event_large.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .enhanced-gallery .logo-image-event {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/logo_event_large_2x.png")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .enhanced-gallery .logo-image-event {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/logo_event_small.png")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .logo-image-event {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/logo_event_small_2x.png")
+    }
+}
+
+
+.enhanced-gallery .gallery-image-watch-alt {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("http://images.apple.com/cn/home/images/gallery/watch_alt_large.jpg");
+    top: -5%
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-watch-alt {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/watch_alt_large_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .enhanced-gallery .gallery-image-watch-alt {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/watch_alt_medium.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-watch-alt {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/watch_alt_medium_2x.jpg")
+    }
+}
+
+@media screen and (max-aspect-ratio: 5 / 6) {
+    .enhanced-gallery .gallery-image-watch-alt {
+        background-size: auto 110%;
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/watch_alt_portrait_large.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 5 / 6) and (min-resolution: 1.5dppx), screen and (max-aspect-ratio: 5 / 6) and (-webkit-min-device-pixel-ratio: 1.5), screen and (max-aspect-ratio: 5 / 6) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-watch-alt {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/watch_alt_portrait_large_2x.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) {
+    .enhanced-gallery .gallery-image-watch-alt {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/watch_alt_portrait_small.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-watch-alt {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/watch_alt_portrait_small_2x.jpg")
+    }
+}
+
+@media screen and (max-aspect-ratio: 1 / 1) {
+    .enhanced-gallery.android .gallery-image-watch-alt {
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/watch_alt_portrait_large.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1 / 1) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 1 / 1) and (min-resolution: 1.5dppx), screen and (max-aspect-ratio: 1 / 1) and (-webkit-min-device-pixel-ratio: 1.5), screen and (max-aspect-ratio: 1 / 1) and (min-resolution: 144dpi) {
+    .enhanced-gallery.android .gallery-image-watch-alt {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/watch_alt_portrait_large_2x.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1 / 1) and (max-width: 735px) {
+    .enhanced-gallery.android .gallery-image-watch-alt {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/watch_alt_portrait_small.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1 / 1) and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 1 / 1) and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-aspect-ratio: 1 / 1) and (max-width: 735px) and (min-resolution: 144dpi) {
+    .enhanced-gallery.android .gallery-image-watch-alt {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/watch_alt_portrait_small_2x.jpg")
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.no-js .gallery-image-macbookpro,.no-enhanced-gallery .gallery-image-macbookpro{width:1347px;height:530px;background-size:1347px 530px;background-repeat:no-repeat;background-image:url("http://images.apple.com/cn/home/images/stacked/macbookpro_large.jpg");}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){.no-js .gallery-image-macbookpro,.no-enhanced-gallery .gallery-image-macbookpro{background-image:url("http://images.apple.com/cn/home/images/stacked/macbookpro_large_2x.jpg")}}
+@media only screen and (max-width: 1068px){.no-js .gallery-image-macbookpro,.no-enhanced-gallery .gallery-image-macbookpro{width:1029px;height:405px;background-size:1029px 405px;background-repeat:no-repeat;background-image:url("http://images.apple.com/cn/home/images/stacked/macbookpro_medium.jpg")}}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi){.no-js .gallery-image-macbookpro,.no-enhanced-gallery .gallery-image-macbookpro{background-image:url("http://images.apple.com/cn/home/images/stacked/macbookpro_medium_2x.jpg")}}
+@media only screen and (max-width: 735px){.no-js .gallery-image-macbookpro,.no-enhanced-gallery .gallery-image-macbookpro{width:429px;height:342px;background-size:429px 342px;background-repeat:no-repeat;background-image:url("http://images.apple.com/cn/home/images/stacked/macbookpro_small.jpg")}}
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi){.no-js .gallery-image-macbookpro,.no-enhanced-gallery .gallery-image-macbookpro{background-image:url("http://images.apple.com/cn/home/images/stacked/macbookpro_small_2x.jpg")}}
+
+
+.promo-holiday-1{background-size:360px 200px;background-repeat:no-repeat;background-image:url("http://images.apple.com/cn/home/images/promos/gifts_large.jpg")}@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){.promo-holiday-1{background-image:url("http://images.apple.com/cn/home/images/promos/gifts_large_2x.jpg")}}@media only screen and (min-width: 1442px){.promo-holiday-1{background-size:640px 200px;background-repeat:no-repeat;background-image:url("http://images.apple.com/cn/home/images/promos/gifts_xlarge.jpg")}}@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi){.promo-holiday-1{background-image:url("http://images.apple.com/cn/home/images/promos/gifts_xlarge_2x.jpg")}}@media only screen and (max-width: 1068px){.promo-holiday-1{background-size:640px 200px;background-repeat:no-repeat;background-image:url("http://images.apple.com/cn/home/images/promos/gifts_medium.jpg")}}@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi){.promo-holiday-1{background-image:url("http://images.apple.com/cn/home/images/promos/gifts_medium_2x.jpg")}}@media only screen and (max-width: 735px){.promo-holiday-1{background-size:736px 200px;background-repeat:no-repeat;background-image:url("http://images.apple.com/cn/home/images/promos/gifts_small.jpg")}}@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi){.promo-holiday-1{background-image:url("http://images.apple.com/cn/home/images/promos/gifts_small_2x.jpg")}}
+
+
+
+
+
+
+
+.enhanced-gallery .gallery-image-watch {
+  background-image: url("http://images.apple.com/cn/home/images/watch_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .enhanced-gallery .gallery-image-watch {
+    background-image: url("http://images.apple.com/cn/home/images/watch_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .enhanced-gallery .gallery-image-watch {
+    background-image: url("http://images.apple.com/cn/home/images/watch_medium.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .enhanced-gallery .gallery-image-watch {
+    background-image: url("http://images.apple.com/cn/home/images/watch_medium_2x.jpg");
+  }
+}
+
+@media screen and (max-aspect-ratio: 5 / 6) {
+  .enhanced-gallery .gallery-image-watch {
+    background-image: url("http://images.apple.com/cn/home/images/watch_portrait_large.jpg");
+  }
+}
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 5 / 6) and (min-resolution: 1.5dppx), screen and (max-aspect-ratio: 5 / 6) and (-webkit-min-device-pixel-ratio: 1.5), screen and (max-aspect-ratio: 5 / 6) and (min-resolution: 144dpi) {
+  .enhanced-gallery .gallery-image-watch {
+    background-image: url("http://images.apple.com/cn/home/images/watch_portrait_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) {
+  .enhanced-gallery .gallery-image-watch {
+    background-image: url("http://images.apple.com/cn/home/images/watch_portrait_small.jpg");
+  }
+}
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) and (min-resolution: 144dpi) {
+  .enhanced-gallery .gallery-image-watch {
+    background-image: url("http://images.apple.com/cn/home/images/watch_portrait_small_2x.jpg");
+  }
+}
+
+.enhanced-gallery .gallery-image-gift-guide {
+    background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_large.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_large_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_medium.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .enhanced-gallery .gallery-image-gift-guide {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_small.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_small_2x.jpg")
+    }
+}
+
+.no-js .gallery-image-gift-guide, .no-enhanced-gallery .gallery-image-gift-guide {
+    background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_large.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .no-js .gallery-image-gift-guide, .no-enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_large_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .no-js .gallery-image-gift-guide, .no-enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_medium.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .no-js .gallery-image-gift-guide, .no-enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .no-js .gallery-image-gift-guide, .no-enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_small.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .no-js .gallery-image-gift-guide, .no-enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_small_2x.jpg")
+    }
+}
+
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (max-width: 1068px) {
+    .enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_portrait_medium.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 5 / 6) and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-aspect-ratio: 5 / 6) and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_portrait_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) {
+    .enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_portrait_small.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_portrait_small_2x.jpg")
+    }
+}
+
+
+@media only screen and (max-aspect-ratio: 1 / 1) and (max-width: 1068px) {
+    .enhanced-gallery.android .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_portrait_medium.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1 / 1) and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 1 / 1) and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-aspect-ratio: 1 / 1) and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .enhanced-gallery.android .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_portrait_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1 / 1) and (max-width: 735px) {
+    .enhanced-gallery.android .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_portrait_small.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 1 / 1) and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 1 / 1) and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-aspect-ratio: 1 / 1) and (max-width: 735px) and (min-resolution: 144dpi) {
+    .enhanced-gallery.android .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_portrait_small_2x.jpg")
+    }
+}
+
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (max-width: 1068px) {
+    .no-js .gallery-image-gift-guide, .no-enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_portrait_medium.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 5 / 6) and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-aspect-ratio: 5 / 6) and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .no-js .gallery-image-gift-guide, .no-enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_portrait_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) {
+    .no-js .gallery-image-gift-guide, .no-enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_portrait_small.jpg")
+    }
+}
+
+@media only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-aspect-ratio: 5 / 6) and (max-width: 735px) and (min-resolution: 144dpi) {
+    .no-js .gallery-image-gift-guide, .no-enhanced-gallery .gallery-image-gift-guide {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/hero_holiday_portrait_small_2x.jpg")
+    }
+}
+
+
+.promo-gifts-lastminute {
+    background-image: url("http://images.apple.com/cn/home/images/shared/gifts_lastminute_large.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .promo-gifts-lastminute {
+        background-image: url("http://images.apple.com/cn/home/images/shared/gifts_lastminute_large_2x.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .promo-gifts-lastminute {
+        background-image: url("http://images.apple.com/cn/home/images/shared/gifts_lastminute_xlarge.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .promo-gifts-lastminute {
+        background-image: url("http://images.apple.com/cn/home/images/shared/gifts_lastminute_xlarge_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .promo-gifts-lastminute {
+        background-image: url("http://images.apple.com/cn/home/images/shared/gifts_lastminute_medium.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .promo-gifts-lastminute {
+        background-image: url("http://images.apple.com/cn/home/images/shared/gifts_lastminute_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .promo-gifts-lastminute {
+        background-size: 736px 200px;
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/shared/gifts_lastminute_small.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .promo-gifts-lastminute {
+        background-image: url("http://images.apple.com/cn/home/images/shared/gifts_lastminute_small_2x.jpg")
+    }
+}
+
+.no-js .gallery-image-watch-alt, .no-enhanced-gallery .gallery-image-watch-alt {
+    background-image: url("http://images.apple.com/cn/home/images/stacked/watch_alt_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .no-js .gallery-image-watch-alt, .no-enhanced-gallery .gallery-image-watch-alt {
+        background-image: url("http://images.apple.com/cn/home/images/stacked/watch_alt_large_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .no-js .gallery-image-watch-alt, .no-enhanced-gallery .gallery-image-watch-alt {
+        background-image: url("http://images.apple.com/cn/home/images/stacked/watch_alt_medium.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .no-js .gallery-image-watch-alt, .no-enhanced-gallery .gallery-image-watch-alt {
+        background-image: url("http://images.apple.com/cn/home/images/stacked/watch_alt_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .no-js .gallery-image-watch-alt, .no-enhanced-gallery .gallery-image-watch-alt {
+        background-image: url("http://images.apple.com/cn/home/images/stacked/watch_alt_small.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .no-js .gallery-image-watch-alt, .no-enhanced-gallery .gallery-image-watch-alt {
+        background-image: url("http://images.apple.com/cn/home/images/stacked/watch_alt_small_2x.jpg")
+    }
+}
+
+.enhanced-gallery .gallery-image-iphone-alt {
+    background-position: center center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-image: url("http://images.apple.com/cn/home/images/gallery/iphone_alt_large.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-iphone-alt {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/iphone_alt_large_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .enhanced-gallery .gallery-image-iphone-alt {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/iphone_alt_medium.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-iphone-alt {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/iphone_alt_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .enhanced-gallery .gallery-image-iphone-alt {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/iphone_alt_small.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-iphone-alt {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/iphone_alt_small_2x.jpg")
+    }
+}
+
+.enhanced-gallery .gallery-item-iphone-alt {
+    background: #0a0a0a
+}
+.enhanced-gallery .gallery-item-iphone-alt .gallery-item-content .gallery-item-lockup-wrapper {
+    position: absolute;
+    top: 14%;
+    width: 100%
+}
+
+@media only screen and (max-width: 1068px) {
+    .no-js .gallery-image-iphone, .no-enhanced-gallery .gallery-image-iphone {
+        left: 50%;
+        margin-left: -280.5px;
+        position: relative
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .no-js .gallery-image-iphone, .no-enhanced-gallery .gallery-image-iphone {
+        left: 50%;
+        margin-left: -194px;
+        position: relative
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .no-js .gallery-image-iphone, .no-enhanced-gallery .gallery-image-iphone {
+        margin-top: -15px
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .no-js .gallery-image-iphone, .no-enhanced-gallery .gallery-image-iphone {
+        margin-top: 0
+    }
+}
+
+.no-js .gallery-item-iphone-alt, .no-enhanced-gallery .gallery-item-iphone-alt {
+    background: #0a0a0a
+}
+
+.no-js .gallery-image-iphone-alt, .no-enhanced-gallery .gallery-image-iphone-alt {
+    position: absolute;
+    bottom: 0;
+    width: 1212px;
+    height: 757px;
+    background-size: 1212px 757px;
+    background-repeat: no-repeat;
+    background-image: url("http://images.apple.com/cn/home/images/stacked/iphone_alt_large.jpg");
+    left: 50%;
+    margin-left: -606px;
+    position: relative;
+    position: absolute;
+    margin-bottom: -20px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .no-js .gallery-image-iphone-alt, .no-enhanced-gallery .gallery-image-iphone-alt {
+        background-image: url("http://images.apple.com/cn/home/images/stacked/iphone_alt_large_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .no-js .gallery-image-iphone-alt, .no-enhanced-gallery .gallery-image-iphone-alt {
+        width: 970px;
+        height: 606px;
+        background-size: 970px 606px;
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/stacked/iphone_alt_medium.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .no-js .gallery-image-iphone-alt, .no-enhanced-gallery .gallery-image-iphone-alt {
+        background-image: url("http://images.apple.com/cn/home/images/stacked/iphone_alt_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .no-js .gallery-image-iphone-alt, .no-enhanced-gallery .gallery-image-iphone-alt {
+        width: 812px;
+        height: 507px;
+        background-size: 812px 507px;
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/stacked/iphone_alt_small.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .no-js .gallery-image-iphone-alt, .no-enhanced-gallery .gallery-image-iphone-alt {
+        background-image: url("http://images.apple.com/cn/home/images/stacked/iphone_alt_small_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .no-js .gallery-image-iphone-alt, .no-enhanced-gallery .gallery-image-iphone-alt {
+        left: 50%;
+        margin-left: -485px;
+        position: relative
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .no-js .gallery-image-iphone-alt, .no-enhanced-gallery .gallery-image-iphone-alt {
+        left: 50%;
+        margin-left: -406px;
+        position: relative
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .no-js .gallery-image-iphone-alt, .no-enhanced-gallery .gallery-image-iphone-alt {
+        position: absolute;
+        margin-bottom: -16px
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .no-js .gallery-image-iphone-alt, .no-enhanced-gallery .gallery-image-iphone-alt {
+        position: absolute;
+        margin-bottom: -13px
+    }
+}
+
+
+.promo-made-by-apple {
+    background-image: url("http://images.apple.com/cn/home/images/shared/made_by_apple_large.jpg")
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .promo-made-by-apple {
+        background-image: url("http://images.apple.com/cn/home/images/shared/made_by_apple_large_2x.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .promo-made-by-apple {
+        background-image: url("http://images.apple.com/cn/home/images/shared/made_by_apple_xlarge.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .promo-made-by-apple {
+        background-image: url("http://images.apple.com/cn/home/images/shared/made_by_apple_xlarge_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .promo-made-by-apple {
+        background-image: url("http://images.apple.com/cn/home/images/shared/made_by_apple_medium.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .promo-made-by-apple {
+        background-image: url("http://images.apple.com/cn/home/images/shared/made_by_apple_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .promo-made-by-apple {
+        background-image: url("http://images.apple.com/cn/home/images/shared/made_by_apple_small.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .promo-made-by-apple {
+        background-image: url("http://images.apple.com/cn/home/images/shared/made_by_apple_small_2x.jpg")
+    }
+}
+
+
+
+
+@media only screen and (max-width: 735px) {
+	.enhanced-gallery .gallery-item-gift-guide .homepage-headline {
+    margin-bottom: 1px;
+	}
+}
+
+.enhanced-gallery .gallery-image-new-years {
+    background-repeat: no-repeat;
+    background-image: url("http://images.apple.com/cn/home/images/gallery/cny_gifts_large.jpg");
+    background-size: auto calc(88% - 150px);
+    background-position: 50% 100%
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-new-years {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_gifts_large_2x.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) {
+    .enhanced-gallery .gallery-image-new-years {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_gifts_xlarge.jpg")
+    }
+}
+
+@media only screen and (min-width: 1442px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1442px) and (min-resolution: 1.5dppx), only screen and (min-width: 1442px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-new-years {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_gifts_xlarge_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .enhanced-gallery .gallery-image-new-years {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_gifts_medium.jpg")
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-new-years {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_gifts_medium_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .enhanced-gallery .gallery-image-new-years {
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_gifts_small.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .enhanced-gallery .gallery-image-new-years {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_gifts_small_2x.jpg")
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .enhanced-gallery .gallery-image-new-years {
+        background-size: auto calc(80% - 150px);
+        background-position: 50% 88%
+    }
+}
+
+/*
+ * Made in CNY Hero Slide
+ */
+
+/* Typography */
+.gallery-item-madeincny .homepage-headline {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 200;
+    letter-spacing: 0em;
+}
+
+html.ie8 .gallery-item-madeincny .homepage-headline {
+    font-weight: normal;
+}
+
+@media only screen and (max-width: 1068px) {
+    .gallery-item-madeincny .homepage-headline {
+        font-size: 36px;
+        line-height: 1;
+        font-weight: 200;
+        letter-spacing: 0em;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .gallery-item-madeincny .homepage-headline {
+        font-size: 34px;
+        line-height: 1;
+        font-weight: 200;
+        letter-spacing: 0em;
+    }
+}
+
+.gallery-item-madeincny .intro {
+    font-size: 24px;
+    line-height: 1.33349;
+    font-weight: 300;
+    letter-spacing: 0em;
+}
+
+html.ie8 .gallery-item-madeincny .intro {
+    font-weight: normal;
+}
+
+@media only screen and (max-width: 1068px) {
+    .gallery-item-madeincny .intro {
+        font-size: 22px;
+        line-height: 1.36364;
+        font-weight: 300;
+        letter-spacing: 0em;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .gallery-item-madeincny .intro {
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: 300;
+        letter-spacing: 0em;
+    }
+}
+
+/* Hero copy with gradient background */
+.gallery-item-madeincny .gallery-item-lockup-wrapper {
+    position: absolute;
+    z-index: 1;
+    width: 150%;
+    top: -100px;
+    left: -25%;
+    padding: 130px 0 20px;
+    background: #f5b033;
+    background: linear-gradient(135deg, #f5b033 0%,#ec782a 100%);
+}
+.enhanced-gallery .gallery-item-madeincny .gallery-item-lockup-wrapper {
+    padding: 164px 0 16px;
+}
+@media only screen and (max-width: 1068px){
+	.enhanced-gallery .gallery-item-madeincny .gallery-item-lockup-wrapper {
+		padding: 160px 0 12px;
+	}
+}
+@media only screen and (max-width: 1068px) and (max-height: 655px) {
+	.enhanced-gallery .gallery-item-madeincny .gallery-item-lockup-wrapper {
+		padding: 150px 0 0px;
+	}
+}
+.gallery-item-madeincny .intro {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*
+ * Hero Image
+ */
+
+/* landscape aspect ratio hero images */
+.gallery-image-madeincny {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: url("http://images.apple.com/cn/home/images/gallery/cny_large.jpg");
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    .gallery-image-madeincny {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_large_2x.jpg");
+    }
+}
+@media only screen and (max-width: 1068px) {
+    .gallery-image-madeincny {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_medium.jpg");
+    }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .gallery-image-madeincny {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_medium_2x.jpg");
+    }
+}
+@media only screen and (max-width: 735px) {
+    .gallery-image-madeincny {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_small.jpg");
+    }
+}
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .gallery-image-madeincny {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_small_2x.jpg");
+    }
+}
+
+/* portrait aspect ratio hero images */
+@media screen and (max-aspect-ratio: 4/5) {
+    .gallery-image-madeincny {
+        background-position: bottom right;
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_portrait_large.jpg");
+    }
+}
+@media screen and (max-aspect-ratio: 4/5) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .gallery-image-madeincny {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_portrait_large_2x.jpg");
+    }
+}
+@media only screen and (max-width: 735px) and (max-aspect-ratio: 4/5) {
+    .gallery-image-madeincny {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_portrait_small.jpg");
+    }
+}
+@media only screen and (max-width: 735px) and (max-aspect-ratio: 4/5) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .gallery-image-madeincny {
+        background-image: url("http://images.apple.com/cn/home/images/gallery/cny_portrait_small_2x.jpg");
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+	.gallery-image-madeincny{
+		margin-top: -70px;
+	}
+}
+@media only screen and (min-width: 1440px) and (max-height: 1000px) and (max-width: 1800px) {
+	.gallery-image-madeincny{
+		margin-top: -60px;
+	}
+}
+@media only screen and (min-width: 2280px) and (max-height: 1288px) {
+	.gallery-image-madeincny{
+		margin-top: -160px;
+	}
+	.enhanced-gallery .gallery-image{
+		height: 120%;
+	}
+}
+@media only screen and (orientation: landscape) and (max-width: 736px) and (max-device-width: 768px) {
+	.gallery-image-madeincny{
+		margin-top: 22px;
+	}
+}
+
+/*
+ * Stacked fallback
+ */
+.no-js .gallery-image-madeincny,
+.no-enhanced-gallery .gallery-image-madeincny {
+    width: 2560px;
+    height: 1350px;
+    background-size: 2560px 1350px;
+    background-repeat: no-repeat;
+    background-image: url("http://images.apple.com/cn/home/images/stacked/cny_large.jpg");
+    left: 50%;
+    margin-left: -1280px;
+    position: relative;
+    margin-top: -100px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .no-js .gallery-image-madeincny,
+    .no-enhanced-gallery .gallery-image-madeincny {
+        background-image: url("http://images.apple.com/cn/home/images/stacked/cny_large_2x.jpg");
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .no-js .gallery-image-madeincny,
+    .no-enhanced-gallery .gallery-image-madeincny {
+        width: 1821px;
+        height: 960px;
+        background-size: 1821px 960px;
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/stacked/cny_medium.jpg");
+    }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+    .no-js .gallery-image-madeincny,
+    .no-enhanced-gallery .gallery-image-madeincny {
+        background-image: url("http://images.apple.com/cn/home/images/stacked/cny_medium_2x.jpg");
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .no-js .gallery-image-madeincny,
+    .no-enhanced-gallery .gallery-image-madeincny {
+        width: 1233px;
+        height: 650px;
+        background-size: 1233px 650px;
+        background-repeat: no-repeat;
+        background-image: url("http://images.apple.com/cn/home/images/stacked/cny_small.jpg");
+    }
+}
+
+@media only screen and (max-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 735px) and (min-resolution: 1.5dppx), only screen and (max-width: 735px) and (min-resolution: 144dpi) {
+    .no-js .gallery-image-madeincny,
+    .no-enhanced-gallery .gallery-image-madeincny {
+        background-image: url("http://images.apple.com/cn/home/images/stacked/cny_small_2x.jpg");
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .no-js .gallery-image-madeincny,
+    .no-enhanced-gallery .gallery-image-madeincny {
+        left: 50%;
+        margin-left: -910.5px;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .no-js .gallery-image-madeincny,
+    .no-enhanced-gallery .gallery-image-madeincny {
+        left: 50%;
+        margin-left: -616.5px;
+        position: relative;
+    }
+}
+
+
+
+
+

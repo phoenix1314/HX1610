@@ -1,0 +1,31 @@
+var oMsg ={
+msg:"hello",
+from:'lisi',
+to:"zhangshan"
+
+}
+
+服务器角色：中转消息（接收和发送消息）
+
+1、私聊的步骤
+    a/客户端发消息给服务器
+        data
+	{
+	  form:
+	  to:
+	  text:
+	}
+     b/ 服务器解析收到的消息
+        data.to 是要发送给他 这是一个昵称
+	根据data.to（昵称），找到该客户端（浏览器）的socket.id
+     c/ 服务器发送消息给刚才找到的socket.id
+        {
+	  from:
+	  to:
+	  msg:
+	  time:
+	}
+
+	获取在线列表
+	流程：客户端请求在线列表
+	      服务端把在线列表返回给客服端

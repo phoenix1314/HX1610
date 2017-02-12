@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+ </head>
+ <body>
+  <script>
+   /*注意，注释掉的代码要去掉注释才能跑，有两个//注释的地方去掉第一个就好*/
+  var num ="a123";
+  var num1 = 123;
+  var i = 2;
+  alert(i++);//++后置，i会先弹框后做这个加法运算（注意：i最终会做++这个动作，这将会影响下一个弹框的i）
+  alert(++i);//++前置，i会先运算再弹框
+  i+=2;//等价于i=i+2;
+  i=i%1;//取余
+  num==num1?i=8:i=9;//条件运算符（如果num等于num1,则i=8,否则i=9）
+  //alert(i);
+  //alert(!(i==0||num==123));//当i==0或者num==123为真（true）的时候(i==0||num==123)整体为真，!(i==0||num==123)为假
+   eval("x='你';y='好';document.write('结果1：'+x+y)");//将表达式字符串转化为表达式的结果（这个地方记住这个字符串三个字 再就是结果两个字）
+   //document.write();  这个方法是在页面上输出内容
+  //document.getElementById('notExistElement')；  这个方法是获取页面id等于notExistElement的节点（这个是以后的知识点，这里跟大家提一下）
+   document.write(" 结果2："+eval("2+2"));//这里同样eval()括号里是字符串
+
+  // var x=10
+  // document.write(eval(x+17))
+  var m,n,a,b,c,d;
+  m=n=a=b=c=d=1;//赋值
+ // alert(a);
+  (m=a>b)&&(n=c<d);//注意，先计算括号里的运算，a>b为假(false),所以m为假   然后&&这个逻辑符号会出现一个短路的情况，只会执行到m为假这一步便不会再计算n
+  //alert("结果3："+m);
+  //alert("结果4："+n);
+  var x=3;
+  x+=x-=x*=x;
+  //alert(x);
+   var obj = new Object();
+  	console.log(parseFloat(num+num1));
+  	console.log(document.getElementById('notExistElement'));//当获取id（notExistElement）不存在的元素，会返回null
+  </script>
+ </body>
+</html>

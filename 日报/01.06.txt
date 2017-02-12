@@ -1,0 +1,38 @@
+标题：2017.01.06 css3动画
+课程内容：
+1、回顾jq选择器，jq与dom转化，jq对象
+2、css3动画
+transition 可以多项改变：添加多个属性，由逗号隔开
+对应的4个属性：
+transition-property 规定应用过渡css属性名称
+transition-duration 定义过渡效果花费的时间
+transition-timing-function 规定过渡效果的时间曲线
+transition-delay 规定过渡效果何时开始
+
+时间曲线如下：
+ease 逐渐变慢
+linear 匀速
+ease-in 加速
+ease-out 减速
+ease-in-out 加速然后减速
+cubic-bezier 自定义
+
+transform:
+rotate:旋转
+translate 移动
+scale 缩放
+skew 扭曲
+
+3、动画@keyframes
+
+@keyfeamse 自命名 {
+from(0%){ css属性名：属性值}
+to(100%) {css属性名：属性值}
+
+}
+
+作业情况：未完成（webqq界面重新搭框架）
+
+心得体会：知识点太多了，进度有点快，有些都还不及尝试效果。
+webqq作业完成比较慢，遇到bug解决问题要查好久，然后时间就这么过了。
+每天只能完成一个小功能点

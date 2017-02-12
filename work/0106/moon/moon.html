@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>moon</title>
+	<style type="text/css">
+	#moon{
+		width: 600px;
+		height: 600px;
+		background: url(moon.jpg);
+		/*transform: scale(3,3);*/
+		margin-left: 200px;
+/*		transform: translate(100px,50px);*/
+		background-size: 100% 100%;
+		position: relative;
+	}
+
+	#rocket{
+		width: 200px;
+		height: 200px;
+		margin-left: 180px;
+		background: url(rocket.png);
+		background-size: 100% 100%;
+		position: absolute;top: 60px;left: 0px;
+		animation: fire 3s infinite;
+	}
+
+	@keyframes fire {
+		from{
+			transform: skew(70deg,180deg);
+			transform: rotate(0deg) /*translate(40px,60px)*/;
+			transform-origin: 350px 450px;
+
+		}
+/*		30%{
+			transform: rotate(180deg) translate(40px,60px);
+			transform-origin: 100px 100px;
+		}*/
+/*		70%{
+			transform: rotate(180deg);
+			transform-origin: 100px 100px;
+		}*/
+		to{
+			transform: rotate(360deg);
+		}
+	}
+
+	</style>
+	
+</head>
+<body>
+
+<div id="moon"></div>
+<div id="rocket"></div>
+
+</body>
+</html>

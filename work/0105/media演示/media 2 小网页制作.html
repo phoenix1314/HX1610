@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    font-family: "Microsoft Yahei";
+    letter-spacing: 0.6em;
+}
+
+
+.main img {
+    width:100%;
+}
+
+h1{
+    font-size:1.5em;
+}
+
+h2{
+    font-size:1.4em;
+}
+
+.header {
+    padding:1%;
+    background-color:#f1f1f1;
+    border:1px solid #e9e9e9;
+}
+
+.menuitem {
+    margin:4%;
+    margin-left:0;
+    margin-top:0;
+    padding:4%;
+    border-bottom:1px solid #e9e9e9;
+    cursor:pointer;
+}
+
+.main {
+    padding:2%;
+}
+
+.right {
+    padding:4%;
+    background-color:#CDF0F6;
+}
+
+.footer {
+    padding:1%;
+    text-align:center;
+    background-color:#f1f1f1;
+    border:1px solid #e9e9e9;
+    font-size:0.6em;
+}
+
+.gridcontainer {
+	width:100%;
+}
+
+.gridwrapper {
+	overflow:hidden;
+}
+
+.gridbox {
+    margin-bottom:2%;
+    margin-right: 2%;
+    float:left;
+}
+
+.gridheader {
+    width:100%;
+}
+
+.gridmenu {
+    width:20%;
+}
+
+.gridmain {
+    width:50%;
+}
+
+.gridright {
+    width:25%;
+    margin-right:0;
+}
+
+.gridfooter {
+    width:100%;
+    margin-bottom:0;
+}
+
+/*only 限定某种设备*/
+@media only screen and (max-width: 500px) {
+    .gridmenu {
+        width:100%;
+    }
+
+    .menuitem {
+        margin:1%;
+        padding:1%;
+    }
+
+    .gridmain {
+        width:100%;
+    }
+
+    .main {
+        padding:1%;
+    }
+
+    .gridright {
+        width:100%;
+    }
+
+    .right {
+        padding:1%;
+    }
+
+    .gridbox {
+        margin-right:0;
+        float:left;
+    }
+}
+
+</style>
+</head>
+<body>
+<div class="gridcontainer">
+    <div class="gridwrapper">
+        <div class="gridbox gridheader">
+            <div class="header">
+                <h1>阳 光 绿 植</h1>
+            </div>
+        </div>
+        <div class="gridbox gridmenu">
+            <div class="menuitem">植物品种</div>
+            <div class="menuitem">美图欣赏</div>
+            <div class="menuitem">植物养护</div>
+            <div class="menuitem">植物购买</div>
+        </div>
+        <div class="gridbox gridmain">
+            <div class="main">
+<h1>合 果 芋</h1>
+<p>合果芋为天南星科多年生常绿草本植物，原产于热带美洲地区，现作为一种观叶植物在世界各地广泛栽培。合果芋为多年生蔓性常绿草本植物，是一种观叶植物在世界各地广泛栽培。合果芋的茎节具气生根，攀附他物生长。</p>
+<img src="green.jpg" alt="green" width="" height="">
+
+            </div>
+        </div>
+        <div class="gridbox gridright">
+            <div class="right">
+<h2>作用|功效</h2>
+<p>可作篱架及边角、背景、攀墙和铺地材料；可以吸收甲醛、苯。</p>
+<h2>种植|区域</h2>
+<p>喜高温多湿。适应性强，生长健状， 能适应不同光照环境。 喜高温多湿和半阴环境。不耐寒，怕干旱和强光暴晒。</p>
+<h2>购买|价格</h2>
+<p>很便宜！</p>
+            </div>
+        </div>
+        <div class="gridbox gridfooter">
+            <div class="footer">
+<p>本页面尝试通过@media来做一个当页面窗口小于500px时候，对页面重新做调整。可以拉动窗口来看变化。</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

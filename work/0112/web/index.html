@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        /*#friend{*/
+            /*text-align: center;*/
+            /*position: relative;*/
+            /*overflow-y: auto;*/
+        /*}*/
+    </style>
+    <script src="../js/jq3.js"></script>
+    <script src="../js/friend.js"></script>
+    <script src="../js/chat.js"></script>
+    <script src="../js/emoji.js"></script>
+    <script>
+        $(function () {
+            var imgPath = "../images/headimg/";
+            var zs  = new friend(150,40,imgPath+"headimg1.jpg","张山");
+            zs.init("firends");
+            var zx  = new friend(150,40,imgPath+"headimg2.jpg","曾曦");
+            zx.init("firends");
+            var wf  = new friend(150,40,imgPath+"headimg3.jpg","王菲");
+            wf.init("firends");
+            var xx  = new friend(150,40,imgPath+"headimg4.jpg","萧萧");
+            xx.init("firends");
+        })
+    </script>
+</head>
+<body>
+    <div id="frame">
+        <div id="firends">
+
+        </div>
+    </div>
+</body>
+</html>

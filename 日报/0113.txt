@@ -1,0 +1,70 @@
+标题 2017.01.13 html5新特性
+课程内容：
+1、html5介绍以及与html4的区别
+2、html语义元素 如：
+footer
+hgroup
+nav
+aside
+section
+details 
+summary
+progress
+meter
+time
+3、html5 表单元素
+color   date    datetime   datetime-local   email
+month  number  range   search  tel  time  url  week
+4、多媒体 视频video 音频audio
+5、拖放
+a、设置元素为可拖放 draggable="true"
+
+b、拖动什么 - ondragstart 和 setData() 
+dataTransfer.setData() 设置被拖数据的数据类型和值
+ondragstart="drag(event)"
+// drag(event)是ondragstart 属性调用的一个函数，它规定了被拖动的数据。
+function drag(ev)
+{
+// dataTransfer.setData() 方法设置被拖数据的数据类型和值。
+// console.log(ev.target);
+ev.dataTransfer.setData("Text",ev.target.id);//数据类型是 "Text"，值是可拖动元素的 id ("drag1")。
+}
+   
+c、放到何处 – ondragover
+   规定在何处放置被拖动的数据,并event.preventDefault() 
+ondragover="allowDrop(event)"
+function allowDrop(ev)
+{
+//默认是无法将数据/元素放置到其他元素中。如果需要设置允许放置，我们必须阻止对元素的默认处理方式.
+//通过调用 ondragover 事件的 event.preventDefault() 方法.
+ev.preventDefault();
+}
+
+   
+d、进行放置 – ondrop
+当放置被拖数据时，会发生 drop 事件
+
+ondrop="drop(event)"
+function drop(ev)
+{
+ev.preventDefault();//调用 preventDefault() 来避免浏览器对数据的默认处理（drop 事件的默认行为是以链接形式打开）
+var data=ev.dataTransfer.getData("Text");//通过 dataTransfer.getData("Text") 方法获得被拖的数据。该方法将返回在 setData() 方法中设置为相同类型的任何数据。
+//被拖数据是被拖元素的 id ("drag1") ,即data得到的是被拖元素id的值。
+ev.target.appendChild(document.getElementById(data));//把被拖元素追加到放置元素（目标元素）中
+}
+
+作业情况：周末回家了，没时间做了。只有预习下SQlite数据库
+
+心得体会：
+js封装要多练，html5新属性太多了，只能自己花时间去尝试下，才知道效果是什么，才能更好的运用
+
+拓展：什么是 SQLite？
+SQLite是一个进程内的库，实现了自给自足的、无服务器的、零配置的、事务性的 SQL 数据库引擎。它是一个零配置的数据库，这意味着与其他数据库一样，您不需要在系统中配置。
+就像其他数据库，SQLite 引擎不是一个独立的进程，可以按应用程序需求进行静态或动态连接。SQLite 直接访问其存储文件。
+
+注释：SQL 注释以两个连续的 "-" 字符（ASCII 0x2d）开始，并扩展至下一个换行符（ASCII 0x0a）或直到输入结束，以先到者为准。
+
+SQLite 语句
+所有的 SQLite 语句可以以任何关键字开始，如 SELECT、INSERT、UPDATE、DELETE、ALTER、DROP 等，所有的语句以分号（;）结束。
+
+ 

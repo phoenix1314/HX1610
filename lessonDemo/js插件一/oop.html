@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function student(id,name,age,sex){
+            this.no = id;
+            this.usrName=name;
+            this.usrAge = age;
+            this.usrSex = sex;
+            this.showInfo=function(){
+                console.log(this.usrName+"的学号是"+this.no+"号")
+            }
+
+        }
+        var zs = new student(1,"zhangshan",18,"man");
+        var ls = new student(2,"lisi",21,"woman");
+        var ww = new student(3,"wangwu",22,"woman");
+        var a =[];
+        a.push(zs,ls,ww);
+        for(var i = 0; i < a.length;i++){
+            if(a[i].usrAge >20){
+                console.log(a[i].usrName);
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+标题：2017.01.18 webSql
+课程内容：
+openDatabase:访问数据库，没有则创建；
+var db=openDatabase（"文件名","版本",'描述',2*1024）;
+transaction： 控制事务提交或回滚；
+executeSql： 执行sql语句创建，增删改查操作；
+db.transaction(function(tx){
+tx.executeSql('create table tablename()',[参数],
+function（tx,result）{},function(tx,msg){   
+});返回值通知回调函数带回操作信息

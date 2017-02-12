@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组和字符串</title>
+</head>
+<body>
+<script>
+    /*说明数组里面可以存放不同的数据类型*/
+ var arr = [1,2,3,"dfjkjdf"];
+//    alert(typeof(arr[0]));
+var str = "adsger";
+ var str2 = "fd,l3,e.fem,jn,"
+//    alert(str.substring(0,2));
+//    alert(str2.indexOf("f",2));
+//    var arr = [3,2,5,6,1,4,9,8,7];
+   /*选择排序（从大到小排序）*/
+//    for(var i = 0;i<arr.length-1;i++){//每一个元素都要跟它后面所有的元素对比一次
+//        for(var j = i+1;j<arr.length;j++){//从第一个元素开始，去跟后面的每一个元素做对比，若此元素小于去对比的元素，则值互换
+//            if(arr[i]<arr[j]){
+//                var k;
+//                k=arr[i];
+//                arr[i]=arr[j];
+//                arr[j]=k;
+//            }
+//        }
+//    }
+
+ /*冒泡排序*/
+    var arr = [3,2,5,6,1,4,9,8,7];
+
+    for(var i = 0;i<arr.length-1;i++){//每次循环都会选出一次相对最大值（或最小值），也就是说第一次选出的最大值是9，然后将这个值放在arr[8]中，第二次选出的是8，然后将8放到arr[7]
+
+        for(var j=0;j<arr.length-1-i;j++){//外层每次循环选出最大值其实是通过两两对比的循环（本行循环）得到的。  每次选出的最大值都不再参与下一次的循环（所以j<arr.length-1-i）
+
+            if(arr[j]>arr[j+1]){//前一个值跟后一个值做对比
+
+                var k=arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1]=k;
+            }
+        }
+        console.log(arr[i]);
+    }
+    alert(arr);
+
+</script>
+</body>
+</html>

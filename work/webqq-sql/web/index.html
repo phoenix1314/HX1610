@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/tools/jq3.js"></script>
+    <script src="../js/plugs/webSQL.js"></script>
+    <script src="../js/plugs/login.js"></script>
+    <script src="../js/plugs/friend.js"></script>
+    <script src="../js/plugs/webqq.js"></script>
+    <script src="../js/plugs/chat.js"></script>
+    <script src="../js/plugs/emoji.js"></script>
+
+    <script>
+        $(function () {
+            var loginW = new login(300,100);
+            loginW.create("frame");
+            var colStr = " usrName varchar(32), pwd varchar(32)";
+            var colName = ["name","pwd"];
+            loginW.setLoginDB("mydatabase","login",colStr,colName);
+            loginW.setLoginText("用户名","密  码");
+            loginW.setRegBtn("注 册");
+            loginW.setLoginBtn("登  录");
+        })
+    </script>
+</head>
+<body>
+
+</body>
+<div id="frame"></div>
+</html>

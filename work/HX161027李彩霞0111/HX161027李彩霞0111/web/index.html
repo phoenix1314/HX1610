@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/tools/jq3.js"></script>
+    <script src="../js/plugs/popup.js"></script>
+    <script src="../js/plugs/facePackage.js"></script>
+    <title>Title</title>
+
+    <script>
+        function showIndex(){
+            alert("您已成功登陆.");
+        }
+        function exitIndex(){
+            alert("取消登陆.");
+        }
+        $(function(){
+            $("#btn").on("click",function(){
+                var popW = new popupWindows(300,200);
+                popW.init();
+                popW.setTitle("免责声明");
+                popW.setMessage("是否确认登陆");
+                popW.setLeftButton("ok",100,30,"cyan",20,3,"white",showIndex);
+                popW.setRightButton("exit",100,30,"pink",30,3,"",exitIndex);
+                popW.setPosition(40,30);
+            })
+
+            $("#btnface").on("click",function () {
+
+                var faceW = new facePackage(300,250);
+                faceW.init();
+                faceW.setPosition(100,30);
+
+                /*定义数组且赋值*/
+                var count = 75;
+                var arrayFace = new Array()
+                for (var i = 1; i<=count; i++) {
+                    arrayFace[i-1] = i + ".gif";
+                }
+                console.log("arrFace lengtg: "+arrayFace.length);
+
+                /*插入图片*/
+                for(var i = 0;i<arrayFace.length;i++)
+                {
+                    faceW.setImg("../images/",arrayFace[i]);
+                }
+            })
+
+        })//
+    </script>
+</head>
+<body>
+<button id="btn">click me</button>
+<button id="btnface">click face</button>
+<div id="popup"></div>
+</body>
+</html>

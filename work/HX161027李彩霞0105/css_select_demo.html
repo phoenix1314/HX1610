@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	/*属性选择器*/
+	p[class$="p1"] {color:red;}
+	p[class*="p2"] {color:yellow;}
+	p[class^="p3"] {color:pink;}
+
+
+	/*兄弟选择器*/
+	div~span {background-color: green}
+
+	/*伪类：root*/
+/*	html:root {background-color: #dcdcdc;}*/
+
+	p:nth-child(2) {color: purple}
+
+	/*匹配父元素中的倒数第n个结构子元素*/
+	p:nth-last-child(1) {font-size: 30px}
+
+	/*匹配同类型中的第n个同级兄弟元素*/
+	p:nth-of-type(2) {background-color: blue;}
+/*	span:nth-of-type(2) {background-color: blue; font-size: 40px}*/
+	p:nth-last-of-type(4) {font-weight: bold; font-size: 40px;}
+
+	p:last-child {color: red}
+
+	p:first-of-type {color: orange}
+
+	span:only-child {color: cyan}
+
+	span:only-of-type {font-size: 40px;}
+
+	strong:empty {display: block;width: 200px;height: 20px;background-color: #eeeeee}
+	em:empty {display: block;width: 200px;height: 20px;background-color: #eeeeff}
+
+	input:checked {margin: 0 50px;}
+	input:enabled {background-color: #ffff00}
+	input:disabled {border: 1px red solid}
+
+
+
+
+	</style>
+
+
+</head>
+<body>
+
+<p id="title"> 属性选择器 </p>
+<p class="p1">1111111111</p>
+<p class="p2p3">22222222222</p>
+<p class="p3p2">333333333333</p>
+<div>
+	<span>4444</span>
+	<span>55555</span>
+</div>
+<span>6666</span>
+<span>77777</span>
+<div>
+	<span>888888</span>
+	<strong></strong>
+	<em></em>
+</div>
+<span>999</span>
+
+<p>结构体伪类 root</p>
+
+<div id="div1">
+	<p>aaaaa111</p>
+	<p>bbbbb222</p>
+	<p>ccccc333</p>
+	<p>aaaaa444</p>
+	<p>bbbbb555</p>
+	<p>ccccc666</p>
+	<p>aaaaa777</p>
+	<p>bbbbb888</p>
+	<p>ccccc999</p>
+</div>
+
+<div>
+	<input type="radio" name="css3">
+	<input type="radio" name="css3" checked="checked">
+	<input type="checkbox" name="css3">
+	<input type="text" value="">
+	<input type="text" value="" disabled="disabled">
+</div>
+
+</body>
+</html>

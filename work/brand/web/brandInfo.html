@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/tools/jq3.js"></script>
+    <script src="../js/plug/brandInfo.js"></script>
+    <script src="../js/plug/brandData.js"></script>
+    <script src="../js/plug/webSQL.js"></script>
+    <script src="../js/plug/public.js"></script>
+    <title>商品管理表</title>
+    <script>
+            $(function () {
+                /**商品信息表*/
+                var brandW = new brandInfo(400,1200);
+                brandW.init("frame");
+                brandW.createTable("brand");
+               // brandW.setTextDeclare("这是商品信息管理表，以下是已添加数据，需再添加信息，请输入信息点击添加");
+                var arryTh = ["id","name","category_id","origin_id","img","price","operate"];
+                brandW.setTh(arryTh);
+                brandW.dbInit("brandData","brand",arryTh);
+                brandW.setBtnAdd("增加一行");
+               // brandW.setBtnOk("确认保存");
+
+                /**产地表*/
+                var originW = new brandInfo(400,400);
+                brandW.init("frame");
+                brandW.createTable("origin");
+               // brandW.setTextDeclare("这是商品产地管理表，以下是已添加数据，需再添加信息，请输入信息点击添加");
+                var arryTh = ["origin_id","origin_name","operate"];
+                brandW.setTh(arryTh);
+                brandW.dbInit("brandData","origin",arryTh);
+                brandW.setBtnAdd("增加一行");
+
+                /**类别表*/
+                var originW = new brandInfo(400,400);
+                brandW.init("frame");
+                brandW.createTable("category");
+               // brandW.setTextDeclare("这是商品类别管理表，以下是已添加数据，需再添加信息，请输入信息点击添加");
+                var arryTh = ["category_id","category_name","operate"];
+                brandW.setTh(arryTh);
+                brandW.dbInit("brandData","category",arryTh);
+                brandW.setBtnAdd("增加一行");
+
+            })//
+    </script>
+</head>
+<body>
+<div id="frame" style="overflow-y: auto">
+
+</div>
+</body>
+</html>

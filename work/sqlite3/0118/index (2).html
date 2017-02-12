@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+       var db =  openDatabase("hx161088","2.0","test",2*1024);
+        db.transaction(function(tx){
+            tx.executeSql("CREATE TABLE  IF NOT EXISTS stu(id integer primary key autoincrement,name varchar(32),gender varchar(4),class_id int(8))",[],
+                    function(ret,msg){
+                      //  alert("success");
+                    },
+                    function(ret,msg){
+                        alert(msg.message);
+                    }
+            );
+
+//                        var sql="insert into stu values(1009,'lisi','w',20)";
+//            tx.executeSql(sql,[],
+//                    function(ret,msg){
+//                        alert(" insert success")
+//                    },function(ret,msg){
+//                        alert(msg.message);
+//
+//                    })
+
+//            var sql="select * from stu where id=?";
+            var id = 1009;
+            var name ="lisi";
+            tx.executeSql("select * from stu where id=? and name=?",[id,name],
+                    function(ret,result){
+                        //alert(" read success")
+                       // alert(result.rows.item(0).id)
+                        var len = result.rows.length;
+                        for(var i = 0; i < len; i++){
+                            document.write(result.rows.item(i).id+" "+result.rows.item(i).name+"<br/>");
+                        }
+
+
+                    },function(ret,msg){
+                        alert(msg.message);
+
+                    })
+
+
+
+//            var sql="insert into stu values(1008,'zhangshan','man',10)";
+//            tx.executeSql(sql,[],
+//                    function(ret,msg){
+//                        alert(" insert success")
+//                    },function(ret,msg){
+//                        alert(msg.message);
+//
+//                    })
+
+//             sql="delete from  stu ";
+//            tx.executeSql(sql,[],
+//                    function(ret,msg){
+//                        alert(" del success")
+//                    },function(ret,msg){
+//                        alert(msg.message);
+//
+//                    })
+
+        })
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

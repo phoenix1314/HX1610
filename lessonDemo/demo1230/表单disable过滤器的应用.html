@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jq test</title>
+	<meta charset="utf-8">
+
+<!-- 	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script> -->
+	
+	<script type="text/javascript" src="jq.js"></script>
+	
+	<script type="text/javascript">
+
+$(document).ready(function(){
+	$("input[type='checkbox']").click(function(){
+		console.log($("input[type='checkbox']").prop("checked"))
+		if($("input[type='checkbox']").prop("checked")){
+		$("input:disabled").removeAttr("disabled");
+		// $("input:disabled").attr("disabled","disabled");//注意不能是"false"
+		}
+		else{
+		$(":text").attr("disabled","disabled");
+
+		}
+
+	})
+
+	// $("input").on("click",function(){
+	// 	$("input:disabled").removeAttr("disabled");
+	// 	//$("input:disabled").attr("disabled",false);//注意不能是"false"
+
+	// })
+
+
+})
+
+	</script>
+</head>
+<body>
+
+兴趣爱好：
+<input type="checkbox" name="box1" >篮球
+<br />
+说明理由：<input type="text" name="text1" disabled="" >
+
+</body>
+</html>

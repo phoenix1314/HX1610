@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo1129</title>
+</head>
+<body>
+<script type="text/javascript">
+
+function course(name,describe,diff,price){
+	this.name=name;
+	this.des = describe;
+	this.diff = diff;
+	this.price = price;
+}
+
+var cour1 = new course("PHP","php","1","20RMB");
+var cour2 = new course("HTML","html","0","30RMB");
+var cour3 = new course("JAVA","java","2","50RMB");
+
+var ary = new Array();
+var ary1 = [];
+ary1 = [cour1,cour2,cour3];//ary1[0] cour1
+
+for(var i=0;i<ary1.length;i++){
+	for(j in ary1[i]){
+		// document.write(ary1[i][j]+" ");
+	}
+	// document.write("<br />")
+}
+
+
+function stu(){}
+stu.prototype={
+	name:"PHP",
+	des:"php",
+	diff:"0"
+}
+
+
+var stu1={};//创建对象
+var ary2=[];//创建数组
+stu1={name:"php",des:"php最美语言"};//创建对象
+
+
+// alert(cour1.name);
+// with(cour1){
+// 	alert(name);
+// }
+
+// ()
+// []
+// {}//大括号、花括弧
+
+var ary0 = [];
+var ary1 =[2,5,7,2];//声明数组并初始化 （一）
+var ary2 = new Array("a","b","c");//声明数组并初始化 （二）
+var ary3=new Array();
+ary3=["a","b","c","d"]
+
+// ary0.length = 11;
+
+var ary4=new Array(5);//带入一个数值参数表示：数组的长度
+ary4[7] = "aa";
+// alert(ary4.length);
+// document.write(ary4);
+
+
+
+var var1 = ary2.push("zz","yy");
+// alert(var1);
+
+var var2 = ary2.pop();
+var var3 = ary2.pop();
+ary2.shift();
+// document.write(ary2);
+// alert(var3);
+
+
+// for(var i=0;i<ary3.length;i++){
+// 	document.write(ary3[i]+" ");
+// }
+
+function numOrder(a,b){//排序函数
+	return a-b;
+}
+
+var ary5 = [3,88,2,9,24];
+// ary5.sort(numOrder);
+
+
+// ary5.splice(2,2);
+ary5.splice(2,0,99,100);
+// document.write(ary5);
+
+
+
+
+var str1 = "Hello World";//抽取Wor这个子串
+var str = str1.substring(6,9);
+var str2 = str1.substr(6,3);
+var str3 =str1.substr(-5,3)
+// alert(str3);
+
+var rel1 = str1.indexOf("lloo");
+alert(rel1)
+
+	
+</script>
+</body>
+</html>

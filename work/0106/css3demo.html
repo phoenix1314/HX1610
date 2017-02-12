@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>demo</title>
+	<style type="text/css">
+	    div{
+	    	width: 100px;
+	    	height: 50px;
+/*	    	border: 1px red solid;*/
+	    	background-color: pink;
+	    	text-align: center;
+	    	float: left;
+	    	margin: 10px;
+	    }
+
+		#div1{
+			background-color: pink;
+			margin-left: 100px;
+			transition: height 2s;		
+		}
+		#div1:hover{
+			width: 300px;
+		}
+
+		#div2{
+			background-color: yellow;
+			transition: 2s;
+		}
+		#div2:hover{
+			transform: rotate(180deg);
+		}
+
+		#div3{  /*transition: width 1s linear 2s*/
+			background-color: green;
+			transition-property: width;
+			transition-duration: 1s;
+			transition-timing-function: linear;
+			transition-delay: 2s;  /*效果时间*/
+		}
+
+		#div4{
+			background-color: purple;
+			border: 1px red solid;
+			transition: width 2s ease;
+		}
+
+		#div5{
+			background-color: orange;
+			transition: width 2s ease-in;
+		}
+
+		#div6{
+			background-color: rgba(255,0,0,0.5);
+			transition: width 2s ease-out;
+		}
+
+		#div7{
+			background-color: cyan;
+			transition: width 2s ease-in-out;
+		}
+
+		#div8{
+			background-color: gray;
+			transition: width 2s cubic-bezier(0.2,0.3,0.4,0.2);
+		}
+
+		#div3:hover{
+			width: 300px;
+		}
+
+		#div4:hover{
+			width: 300px;
+			border: none;
+		}
+
+		#div5:hover{
+			width: 300px;
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		#div6:hover{
+			width: 300px;
+			background-color: rgba(255,0,0,1);
+		}
+
+		#div7:hover{
+			width: 300px;
+		}
+
+		#div8:hover{
+			width: 300px;
+		}
+
+		#div9{
+			background-color: red;
+			margin-left: 100px;
+			animation: myanimation 5s infinite;
+		}
+
+		#div10{
+			background-color: orange;
+			animation: myanimation 5s infinite alternate;
+		}
+
+		@keyframes myanimation {
+			form{
+				background-color: pink;				
+				transform: translate(100px,200px);
+			}
+			30%{
+				background-color: green;
+				transform: translate(100px,200px);
+				transform: scale(2,2);
+			}
+			60%{
+				background-color: blue;
+				transform: translate(100px,200px);
+				transform: rotate(180deg);
+				
+			}
+			80%{
+				background-color: blue;
+				transform: rotate(180deg);
+				transform-origin: (10px,10px);				
+			}
+			to{
+				background-color: yellow;
+				transform: translate(100px,200px);
+				transform: skew(60deg,180deg);
+
+			}
+
+		}
+
+
+	</style>
+</head>
+<body>
+
+<div id="div10"></div>
+<br />
+<div id="div1"><p>width</p></div>
+<br />
+<div id="div2"><p>rotate</p></div>
+<br />
+<div id="div3"><p>匀速 linear</p></div>
+<br />
+<div id="div4"><p>变慢 ease</p></div>
+<br />
+<div id="div5"><p>加速 ease-in</p></div>
+<br />
+<div id="div6"><p>减速 ease-out</p></div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<div id="div7"><p>加速再减速 ease-in-out</p></div>
+<br />
+<div id="div8"><p>自定义 cubic-bezier</p></div>
+<br />
+<div id="div9"></div>
+
+
+</body>
+</html>

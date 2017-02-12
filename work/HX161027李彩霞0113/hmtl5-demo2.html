@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+<audio controls="controls"> 
+	<source src="霍建华、赵丽颖 - 不可说.mp3"> 
+</audio>
+<br/>
+
+<audio controls="controls"> 
+	<source src="金莎 - 星月神话.mp3"> 
+</audio>
+<br/>
+
+<video width="320" height="240" controls="controls">
+	<source src="徐佳莹 - 女人花.mkv"> </audio>
+</video>
+<br/>
+
+First name: <input type="text" name="fname" >
+Last name: <input type="text" name="lname" autofocus>
+
+<br/>
+<details>
+	<summary>小结</summary>
+	<p>111111</p>
+	<p>22222</p>
+</details>
+
+<br/>
+<span>进度条progress</span>
+<progress value="75" max="100">complete</progress>
+<br/>
+<progress></progress>
+
+<br/>
+<span>meter</span>
+<meter min="0" max="100" value="25">25%</meter> 
+<meter min="0" max="100" low="40" high="90" optimum="100" value="91">A+</meter> 
+
+<br/>
+<br/>
+<span>选择一个日期或者时间</span>
+<input type="datetime" name="bdaytime">
+<br/>
+<span>选择一个日期和时间</span>
+<input type="datetime-local" name="bdaytime">
+<br/>
+<span>选择一个月份</span>
+<input type="month">
+<br/>
+<span>选择一个时间</span>
+<input type="time">
+<br/>
+<span>选择周和年</span>
+<input type="week">
+<br/>
+<form>
+	<p>email:</p>
+	<input type="email">
+	<input type="submit" value="提交">	
+</form>
+<form>
+	<p>url:</p>
+	<input type="url">
+	<input type="submit" value="提交">	
+</form>
+
+<br/>请输入1到5的数字
+<input type="number" name="quantity" min="1" max="5">
+<br/>points
+<input type="range" name="points" min="1" max="10">
+
+<form>
+	<p>search:</p>
+	<input type="search" name="mainsearch">
+	<input type="button" value="search">
+</form>
+
+<form>
+	<p>color:</p>
+	<input type="color" name="click">
+</form>
+
+<p>datalist</p>
+<input list="browsers" name="browsers">
+<datalist id="browsers">
+	<option value="Internet Explorer">
+  	<option value="Firefox">
+  	<option value="Chrome">
+  	<option value="Opera">
+  	<option value="Safari">
+</datalist>
+
+<form action="demo_keygen.php" method="get">
+  用户名: <input type="text" name="usr_name">
+  加密: <keygen name="security">
+  <input type="submit">
+</form>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+<input type="range" id="a" value="50">200
++<input type="number" id="b" value="50">
+=<output name="x" for="a b"></output>
+</form>
+
+
+
+<form>
+	<input type="text" name="usrname" required>
+    <input type="submit" value="提交">
+</form>
+
+步进为3<input type="number" name="points" step="3" min="-10" max="35">
+
+
+
+</body>
+</html>

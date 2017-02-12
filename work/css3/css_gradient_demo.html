@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+	@media all and (min-width: 500px) {
+		body{
+			background-color: #fff0ff;
+		}
+	}
+	@media screen and (max-width: 1100px) {
+		body{
+		background-color: #a0a0a0;
+		}
+	}
+
+		#div1{
+			width: 500px;
+			height: 100px;
+			background:-webkit-linear-gradient(red,pink);
+			background:-moz-linear-gradient(red,pink);
+			background:-o-linear-gradient(red,yellow);
+			background:linear-gradient(red,yellow);
+		}
+
+		/*左到右*/
+		#div2{
+			width: 500px;
+			height: 100px;
+			background:-webkit-linear-gradient(left,red,pink);
+			background:-moz-linear-gradient(right,red,pink);
+			background:-o-linear-gradient(left,red,pink);
+			background:linear-gradient(to right,red,pink); /*IE浏览器要加to才会变化*/
+		}
+		#div3{
+			width: 500px;
+			height: 100px;
+			background:-moz-linear-gradient(to left,red,pink); /*火狐加to 和不加to 渐变方向不一样*/
+			background:linear-gradient(to left,red,pink); /*IE浏览器要加to才会变化*/
+		}
+		#div4{
+			width: 500px;
+			height: 100px;
+			background:-webkit-linear-gradient(left,red,pink,green);
+			background:-moz-linear-gradient(right,red,pink,green);
+			background:-o-linear-gradient(left,red,pink,green);
+			background:linear-gradient(to right,red,pink,green); 
+		}
+		#div5{
+			width: 500px;
+			height: 100px;
+			background:-webkit-linear-gradient(left,rgba(255,0,0,0), rgba(255,0,0,1));
+			background:-moz-linear-gradient(right,rgba(255,0,0,0), rgba(255,0,0,1));
+			background:-o-linear-gradient(left,rgba(255,0,0,0), rgba(255,0,0,1));
+			background:linear-gradient(to right,rgba(255,0,0,0), rgba(255,0,0,1)); 
+		}
+
+	</style>
+</head>
+<body>
+
+<div id="div1"></div>
+<br/>
+<div id="div2"></div>
+<br/>
+<div id="div3"></div>
+<br/>
+<div id="div4"></div>
+<br/>
+<div id="div5"></div>
+
+</body>
+</html>

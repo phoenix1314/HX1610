@@ -1,0 +1,39 @@
+/******************************½ø¶ÈÌõ*******************************/
+.progress{
+    width: 50%;
+    height: 30px;
+    border: 1px solid #EDEDED;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    box-shadow: 0 1px 1px #ccc inset;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.progress .progress-bar{
+    height: 100%;
+    width: 0%;
+    background-color: gray;
+}
+.progress .progress-bar-success{
+    background-color: #5CB85C;
+}
+.progress .progress-bar-info{
+    background-color: #5BC0DE;
+}
+.progress .progress-bar-warning{
+    background-color: #F0AD4E;
+}
+.progress .progress-bar-danger{
+    background-color: #D9534F;
+}
+.progress .progress-bar-striped{
+    background-image:linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+}
+.progress .active{
+    animation:progress-bar-stripes 2s linear infinite;
+}
+@keyframes progress-bar-stripes {
+    from {background-position: 40px 0;}
+    to {background-position: 0 0;}
+}

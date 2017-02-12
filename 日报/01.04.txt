@@ -1,0 +1,132 @@
+标题: 217.01.04 jQuery 特效
+
+课程内容：
+1、remove，deatch区别
+remove:保留移除掉的元素，可以通过返回值获取
+deatch：移除掉的元素以及事件，通过返回值获取元素和事件
+
+2、遍历节点：
+children:所有元素
+parent：父元素
+prev：前一个元素
+prevAll：查找当前元素之前所有的同辈元素
+next：后一个元素
+nextAll:查找当前元素之后所有的同辈元素
+siblings:前后同辈元素不包括自己本身
+
+3、动画效果
+a、隐藏显示：
+语法：$(selector).hide(speed,callback)    隐藏方法
+      $(selector).show(speed,callback)   显示方法
+      $(selector).toggle(speed,callback) 切换隐藏和显示方法
+参数说明：
+speed： 可选。规定隐藏/显示的速度，可取值："slow"、"fast"、“normal" 或毫秒。
+callback：可选。 隐藏或显示完成后所执行的函数名称。
+
+注：对于toggle()方法：一个按钮可以点击两次，实现隐藏和显示的效果
+
+b、滑动
+语法：$(selector).slideUp(speed,callback)    向上滑动
+      $(selector).slideDown(speed,callback)   向下滑动
+      $(selector).slideToggle(speed,callback) 切换上下滑动
+参数说明：
+speed： 可选。规定效果的速度，可取值："slow"、"fast"、“normal" 或毫秒。
+callback：可选。 效果完成后所执行的函数名称。
+
+注：对于slideToggle()方法：一个按钮可以点击两次，实现向上滑动和向下滑动的效果
+
+c、淡入淡出
+语法：$(selector).fadeIn(speed,callback)    变亮至全部
+     $(selector).fadeOut(speed,callback)   变淡至空
+     $(selector).fadeToggle (speed,callback) 切换淡入淡出
+     $(selector).fadeTo (speed,opacity,callback)渐变为给定的不透明度
+参数说明：
+speed： 必需。规定效果时长，可取值："slow"、"fast"、“normal" 或毫秒。
+callback：可选。 效果完成后所执行的函数名称。
+opacity： 必需。将淡入淡出效果设置为给定的不透明度（值介于 0 与 1 之间）。
+
+对于fadeToggle()方法：一个按钮可以点击两次，实现淡入/淡出的效果。
+
+d、自定义动画
+语法：$(selector).animate({params},speed,callback);    
+参数说明：
+params：必需。 定义形成动画的CSS属性。
+speed： 可选。规定效果时长，可取值："slow"、"fast"、“normal" 或毫秒。
+callback：可选。 效果完成后所执行的函数名称
+
+animate()可以操作多个属性
+$("button").click(function(){ $("div").animate({ 
+left:'250px', 
+opacity:'0.5', 
+height:'150px', 
+width:'150px' 
+});
+ });
+
+animate()可以使用相对值（该值相对于元素的当前值）。即在原值的基础上进行加减。
+使用符号“+=” 或 “-=”
+$("button").click(function(){ $("div").animate({ 
+left:'250px', 
+height:'+=150px', width:'+=150px' 
+}); 
+});
+
+animate()可以使用预定义的值：
+可把属性的动画值设置为 "show"、"hide"  或 "toggle
+$(“button”).click(function(){ $(“div”).animate({ height:‘toggle’ 
+}); 
+});
+
+animate()可以使用队列功能（多个动画逐一运行）。
+$("button").click(function(){ 
+var div=$("div"); div.animate({height:'300px',opacity:'0.4'},"slow"); div.animate({width:'300px',opacity:'0.8'},"slow"); div.animate({height:'100px',opacity:'0.4'},"slow"); div.animate({width:'100px',opacity:'0.8'},"slow"); 
+});
+
+作业情况；已提交
+
+遇到问题：多个ul嵌套，第2个li点击事件执行完后第2个li事件也被执行
+
+解决方法：用冒泡事件阻止event.stopPropagation();
+代码如下：
+            $(".group").click(function(event) {
+                if(event.stopPropagation) {
+                    event.stopPropagation();//阻止冒泡事件发生，就是阻止点击licon时，他里面的内容也跟着运行事件。但IE并不认识
+                } else if(window.event) { //IE下阻止冒泡事件，window.event.cancelBubble = true;谷歌，火狐等不认识
+                    window.event.cancelBubble = true;
+                }
+            })
+
+心得体会：心得体会：id命名不能同名，class可以同名。
+jq的运用还是很多不熟悉，需要慢慢的尝试磨合，才知道用法以及实现的效果。有时候作业遇到问题或者用法不熟悉，需要花好长时间去研究尝试。
+
+
+
+
+
+
+
+
+animate()可以操作多个属性
+$("button").click(function(){ $("div").animate({ 
+left:'250px', 
+opacity:'0.5', 
+height:'150px', 
+width:'150px' 
+});
+ });
+animate()可以使用相对值（该值相对于元素的当前值）。即在原值的基础上进行加减。
+使用符号“+=” 或 “-=”
+$("button").click(function(){ $("div").animate({ 
+left:'250px', 
+height:'+=150px', width:'+=150px' 
+}); 
+});
+animate()可以使用预定义的值：
+可把属性的动画值设置为 "show"、"hide"  或 "toggle
+$(“button”).click(function(){ $(“div”).animate({ height:‘toggle’ 
+}); 
+});
+animate()可以使用队列功能（多个动画逐一运行）。
+$("button").click(function(){ 
+var div=$("div"); div.animate({height:'300px',opacity:'0.4'},"slow"); div.animate({width:'300px',opacity:'0.8'},"slow"); div.animate({height:'100px',opacity:'0.4'},"slow"); div.animate({width:'100px',opacity:'0.8'},"slow"); 
+});

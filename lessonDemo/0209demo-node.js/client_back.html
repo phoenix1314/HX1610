@@ -1,0 +1,65 @@
+<html>
+	<head>
+	<script src="/socket.io/socket.io.js" type="text/javascript"></script>
+		<script src="jquery-1.8.2.min.js"></script>
+		<script>
+			function getNowFormatDate() {
+				var date = new Date();
+				var seperator1 = "-";
+				var seperator2 = ":";
+				var month = date.getMonth() + 1;
+				var strDate = date.getDate();
+				if (month >= 1 && month <= 9) {
+					month = "0" + month;
+				}
+				if (strDate >= 0 && strDate <= 9) {
+					strDate = "0" + strDate;
+				}
+				var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+						+ " " + date.getHours() + seperator2 + date.getMinutes()
+						+ seperator2 + date.getSeconds();
+				return currentdate;
+			}
+		</script>
+		<script type="text/javascript">
+			var socket= io("http://127.0.0.1:8888/");
+			socket.on("welcomeMsg",function(data){
+				//alert(data.info);
+				$("#msg").append(data.info);
+			})
+			socket.on("pushMsg",function(data){
+				$("#msg").append("<br/>"+data.nickName+" say:"+data.msg+" "+data.time);
+			})
+		</script>
+		<script>
+			var obj={
+				name:"zhangshan",
+				time:18
+			};
+			$(function(){
+
+				var nick = prompt("please enter NickName");
+				socket.emit("nickEvent",{nickname:nick});
+				//alert("jq is ok");
+				$("#send").on("click",function(){
+					var txt = $("#txt").val();
+					var oMsg ={
+						msg:txt,
+						nickName:nick,
+
+					}
+
+					socket.emit("chatMsgEvent",oMsg);
+				})
+			})
+		</script>
+
+	</head>
+
+	<body>
+		hello world!!!!!!;
+		<input id="txt" type="text" name="">
+		<button id="send">send</button>
+	  <div id="msg" style="border: 1px solid red;width: 700px;height: 700px"></div>
+	</body>
+</html>

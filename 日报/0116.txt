@@ -1,0 +1,76 @@
+标题：2017.01.16 sqlite 
+
+1.sqlite3.exe 文件名.db  //如果有该数据库，就相当于打开这个数据库，没有就创建
+2、建表
+create table 表名(表的字段);
+create table stu(stu_id integer not null primary key autoincrement,name varchar(32),age int(8),time timestamp default (datetime('now','localtime')));、/
+
+3、查看所有的表
+.tables
+4、查看表结构
+.schema
+5、输出显示格式
+   .head on  查询结果显示字段信息
+   .mode column 表示以列对齐的方式查看
+6、插入数据
+   insert into
+7、查询数据
+   select * from stu ;
+ 
+----------------------增-----------
+1、全字段添加
+   insert into 表名 values(表名所有的字段);
+   insert into score values(1,1001,1,50);
+2.添加指定字段
+   insert into 指定字段 values(值');
+   insert into score(stu_id,kc_id,score) values(1004,2,98);
+3.添加表字段
+alter table 表名 add 增加字段名称 增加字段类型;
+alter table score add 'score' int(32);
+
+---------------------查-------------------------
+1、查看所有的字段的数据
+   select * from stu ;
+2、查看指定字段
+   select 指定名称多个用逗号隔开 from 表名;
+3、select * from 表名 where 多个条件用and
+-------------删------------------
+1.删除指定记录
+delete from 表名 where条件
+2、删除会循环删除(假如有4个lisi 全部删掉)
+delete from stu where name='lisi'
+3、删除空字段记录
+ delete from 表名 where 字段 isnull
+4、清空表 delect from 表名
+5、删除表
+  drop table 表名;
+---------------改-----------------
+update stu set 要改的字段多个字段用逗号 name，id where 条件 id = 1;
+
+
+约束
+1、自动增长
+integer primary 
+key autoincrement 主键
+int not null 非空
+
+2、显示系统时间
+字段名称（time）timestamp default (datetime('now','localtime'))
+
+函数：
+平均值 avg
+行数（个数）count
+最大 max
+最小 min
+求和 sum
+绝对值 abs
+小写字母 lower
+长度 length
+库版本 sqlite_version
+
+
+作业情况：已完成
+
+心得体会：sqlite命令多敲就熟悉了，拿到多张表时，观察下数据并且把相同的关联起来，再根据条件查找所需的结果。
+查看1004学号，姓名，课程，分数
+select stu.stu_id,stu.name,class.name,score.score from stu, score, class where stu.stu_id = score.stu_id and class.kc_id = score.kc_id and stu.stu_id = 1004;

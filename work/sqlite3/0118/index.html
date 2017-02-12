@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jq.js"></script>
+    <style>
+        /*div{*/
+            /*width: 300px;*/
+            /*height: 200px;*/
+            /*padding: 10px;*/
+            /*border: 1px red solid;*/
+        /*}*/
+        button{
+            width: 200px;
+            height: 80px;
+        }
+    </style>
+    <script>
+        function createTable(x,y)
+        {
+            console.log("x = "+x +" y = "+y);
+            var db = openDatabase("hx161027","2.0","mydb",2*1024);
+            db.transaction(function(tx){
+                tx.executeSql("CREATE TABLE  IF NOT EXISTS login(account int(32),pwd int(32))",
+                        [],
+                        function(ret,result){
+                            console.log("create table is success");
+                        },
+                        function(ret,error){
+                            alert(error.message);
+                        });
+
+                tx.executeSql("insert into login(account,pwd) values(?,?)",
+                        [x,y],
+                        function(ret,result){
+                            console.log("insert success");
+                        },
+                        function(ret,error){
+                            alert("insert failed: "+error.message);
+                        });
+
+            })
+        }
+        $(function(){
+            $("#btn").on("click",function(){
+                console.log("len = "+$("#login").val().length);
+                var $inputText = $("input[type='text']");
+                var $inputPassword = $("input[type='password']");
+                var account = $inputText.val();
+//                var accountbak="";
+                console.log("account = "+account);
+                var pwd = $inputPassword.val();
+//                var pwdbak="";
+                console.log("pwd = "+pwd);
+                if(account || pwd)
+                {
+                    // if(account === accountbak || pwd === pwdbak)
+                    // {
+                    //     alert("该帐号已保存");
+                    // }
+                    // else
+                    // {
+                    //     createTable(account,pwd);
+                    //     accountbak = account;
+                    //     pwdbak = pwd;
+                    // }
+                    createTable(account,pwd);
+                }
+                else
+                {
+                    alert("请输入帐号，密码！");
+                }
+            })
+        })
+
+    </script>
+</head>
+<body>
+<div>
+    帐号：
+    <input type="text" id="login">
+    <br>
+    <br>
+    密码：
+    <input type="password" id="pwd">
+    <br>
+    <br>
+    <button id="btn">登录</button>
+</div>
+</body>
+</html>

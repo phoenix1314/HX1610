@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数1</title>
+</head>
+<body>
+    <!-- <button onclick="sumF()">求和</button> -->
+<script>
+    // var arr = [3,2,5,6,1,4,9,8,7];
+    var arr2 = new Array(2,6,5);
+    var arr3 = [7,1,5,2,4];
+//    alert(arr2.sort());
+   /*选择排序（从大到小排序）*/
+   // for(var i = 0;i<arr.length-1;i++){//每一个元素都要跟它后面所有的元素对比一次
+   //     for(var j = i+1;j<arr.length;j++){//从第一个元素开始，去跟后面的每一个元素做对比，若此元素小于去对比的元素，则值互换
+   //         if(arr[i]<arr[j]){
+   //             var k;
+   //             k=arr[i];
+   //             arr[i]=arr[j];
+   //             arr[j]=k;
+   //         }
+   //     }
+   // }
+   // alert(arr);
+
+    function sortArr(arr){
+        /*选择排序（从大到小排序）*/
+        for(var i = 0;i<arr.length-1;i++){//每一个元素都要跟它后面所有的元素对比一次
+            for(var j = i+1;j<arr.length;j++){//从第一个元素开始，去跟后面的每一个元素做对比，若此元素小于去对比的元素，则值互换
+                if(arr[i]<arr[j]){
+                    var k;
+                    k=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=k;
+                }
+            }
+        }
+        // alert(arr);
+        return arr;//有返回值
+    }
+
+    var result = sortArr(arr3);
+    console.log("这是排序后的arr3:"+result);
+    // sortArr(arr3);
+
+
+    var sum = 0;
+    //求和
+    // function myFunction(num1,num2){
+        
+    //     for(var i=num1;i<=num2;i++){
+    //         sum = sum +i;
+    //     }
+    //     console.log(sum);
+    // }
+
+    /*无参函数*/
+    function sumF(){
+        for(var i=10;i<=20;i++){
+            sum = sum+i;
+        }
+        alert(arguments.length);//获取此函数参数的长度，最终长度还是要根据调用此函数时所给的参数定
+        return sum;
+    }
+    alert(sumF());
+
+    // function sumF(num1,num2){
+    //     for(var i=num1;i<=num2;i++){
+    //         sum = sum+i;
+    //     }
+    //     return num1;
+    // }
+    //  alert(sumF());
+    //myFunction(10,20);
+   //var result = sortArr(arr1);
+   //alert(result);
+   // alert(myFunction(3,"df"));
+
+    //alert(escape('&'));
+    //alert(unescape('%26'));
+    //alert(typeof(String(13)));
+
+</script>
+</body>
+</html>

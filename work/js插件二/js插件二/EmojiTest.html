@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/plugs/global.css" type="text/css" rel="stylesheet">
+    <link href="css/plugs/button.css" type="text/css" rel="stylesheet">
+    <script src="js/tools/jquery-3.1.1.js"></script>
+    <script src="js/plugs/Emoji.js"></script>
+    <style>
+        .emojiActive:hover{
+            background-color: red;
+        }
+        #chat{
+            border: 1px solid blue;
+            height: 100px;
+            width: 500px;
+        }
+    </style>
+    <script>
+        var em1 = [
+                "1.gif",
+                "2.gif",
+                "3.gif",
+                "4.gif",
+                "5.gif",
+                "6.gif",
+                "7.gif",
+                "8.gif",
+                "9.gif",
+                "10.gif",
+                "11.gif",
+                "12.gif",
+                "13.gif",
+                "14.gif",
+        ] //表情图片
+        $(function(){
+            $("#bt1").on("click",function(){
+                //alert(2222)
+                var emji = new Emoji(em1);
+                emji.show();
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="chat" contenteditable="true"> </div>
+    <button id="bt1" class="btn btn-danger">表情</button>
+
+    <div id="divTest">
+    </div>
+    <br/>
+
+</body>
+</html>

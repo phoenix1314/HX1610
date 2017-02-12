@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo1128</title>
+</head>
+<body>
+<script type="text/javascript">
+// var aaa;
+// var bbb;
+// aaa="aaaaaa";
+	function Teacher(a,b,c){//第一种方法：通过构造函数：相当于一个类
+		this.name=a;
+		this.age=b;
+		this.sex=c;
+
+		this.fun1 = function(){
+			alert(111111111);
+
+		}
+
+		// fun1();
+
+		// this.showName = function(d){
+		// 	alert(d);
+		// }
+		// bbb="bbbbb";
+	}
+
+
+	// fun1();
+
+
+var zs=new Teacher();
+var ls = new Teacher("lisi","22","female");
+var ww = new Teacher("wangwu","22","female");
+// ww.fun1();
+
+
+
+function Stu(){}
+Stu.prototype = {//第二种方法：通过prototype来追加属性和方法
+	name:"lilei",
+	age:"22",
+	show:function(){
+		alert("something");
+	}
+}
+// var aaa={};
+
+var stu1 = new Stu();
+// alert(stu1.name);
+// stu1.show();
+
+var stu2={name:"hanmeimei",age:"18"};//第三种方法：通过JSON数据格式方式
+
+alert(stu1 instanceof Stu);
+
+// alert(stu2 instanceof Stu);
+
+// alert(stu1["name"]);
+
+// for(i=0;i<stu1.length;i++){}
+// for(i in stu1){  //离散型的下标
+// 	if(typeof(stu1[i]) =='function'){stu1[i]();}
+// 	else{
+// 	// alert(stu1[i]);
+
+
+// 	}
+// }
+
+
+
+
+
+
+// alert(ww['sex']);
+
+
+// for(i in ww){
+// alert(ww[i]);
+// }
+// alert(ls.name);
+// zs.age = 30;
+// alert(zs.age);
+
+	// alert(bbb);
+
+</script>
+</body>
+</html>
